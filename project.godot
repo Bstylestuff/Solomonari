@@ -11,12 +11,9 @@ config_version=4
 [application]
 
 config/name="Solomonari"
-<<<<<<< Updated upstream
-run/main_scene="res://Screens/MainGame/World.tscn"
-=======
 run/main_scene="res://Screens/Menus/MainMenu/MainMenu.tscn"
->>>>>>> Stashed changes
 config/icon="res://icon.png"
+<<<<<<<Updatedupstreamrun/main_scene="res://Screens/MainGame/World.tscn"
 
 [autoload]
 
