@@ -11,7 +11,11 @@ config_version=4
 [application]
 
 config/name="Solomonari"
+<<<<<<< Updated upstream
 run/main_scene="res://Screens/MainGame/World.tscn"
+=======
+run/main_scene="res://Screens/Menus/MainMenu/MainMenu.tscn"
+>>>>>>> Stashed changes
 config/icon="res://icon.png"
 
 [autoload]
@@ -92,6 +96,10 @@ Pause={
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [physics]
 
