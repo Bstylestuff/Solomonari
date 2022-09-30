@@ -9,5 +9,5 @@ func _ready():
 		$pauseButton.show()
 
 func _on_pauseButton_pressed():
-	$Node2D.spawn()
+	$Mountain.spawn()
 
