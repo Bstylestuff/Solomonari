@@ -9,5 +9,5 @@ func _ready():
 		$pauseButton.show()
 
 func _on_pauseButton_pressed():
-	pass 
+	$Node2D.spawn()
 

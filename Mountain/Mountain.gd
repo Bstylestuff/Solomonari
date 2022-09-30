@@ -4,5 +4,5 @@ const cloud_template = preload("res://Cloud/Cloud.tscn")
 
 func spawn():
 	var new_cloud = cloud_template.instance()
-	new_cloud.set_pos(self.global_position)
+	new_cloud.global_position=self.global_position
 	get_parent().add_child(new_cloud)
