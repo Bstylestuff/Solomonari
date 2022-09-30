@@ -7,6 +7,7 @@ var path_follow=true
 var point_to_loffow=0
 var path_to_folow=[]
 var t = 0
+export var  ttl = 500
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,12 +20,11 @@ func _process(delta):
 	
 	if path_to_folow.size() > 0:
 		if path_follow ==true:
-			t += delta*0.3
-			if self.position.distance_to(path_to_folow[point_to_loffow])>10:
-				self.position=self.position.linear_interpolate(path_to_folow[point_to_loffow],t)
-			
+			t += delta*0.2
+			if self.global_position.distance_to(path_to_folow[point_to_loffow])>3:
+				self.global_position=self.global_position.linear_interpolate(path_to_folow[point_to_loffow],t)
 	
-	if point_to_loffow < path_to_folow.size() &&  self.position.distance_to(path_to_folow[point_to_loffow])<10 :
+	if point_to_loffow < path_to_folow.size() &&  self.global_position.distance_to(path_to_folow[point_to_loffow])<3 :
 		point_to_loffow +=1
 		t=0 
 	if point_to_loffow == path_to_folow.size():
@@ -36,14 +36,15 @@ func _process(delta):
 func _input(event):
 	
 	if event is InputEventMouseMotion && active==true:
-		path_to_folow.append(event.position)
-	
-	if event is InputEventMouseButton:
 		
+		path_to_folow.append(get_global_mouse_position())
+	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT  and active==true and event.pressed==false:
 			active=false
 			mouse_over=false
 		if event.button_index == BUTTON_LEFT  and event.pressed and mouse_over==true :
+			path_to_folow.clear()
+			point_to_loffow=0
 			active =true
 
 
