@@ -20,14 +20,13 @@ func _process(delta):
 	if path_to_folow.size() > 0:
 		if path_follow ==true:
 			if self.global_position.distance_to(path_to_folow[point_to_loffow])>4:
-				self.global_position=self.global_position.linear_interpolate(path_to_folow[point_to_loffow],delta*5)
+				self.move_and_slide((-self.global_position+path_to_folow[point_to_loffow]).normalized()*100)
+				#self.global_position=self.global_position.linear_interpolate(path_to_folow[point_to_loffow],delta*5)
 	
 	if point_to_loffow < path_to_folow.size() &&  self.global_position.distance_to(path_to_folow[point_to_loffow])<4 :
 		point_to_loffow +=1
-		t=0 
 	if point_to_loffow == path_to_folow.size():
 		path_to_folow.clear()
-		t=0
 		point_to_loffow =0
 	$Line2D.global_position=Vector2(0,0)
 
