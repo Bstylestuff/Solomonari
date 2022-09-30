@@ -8,15 +8,11 @@ var point_to_loffow=0
 var path_to_folow=[]
 export var  ttl = 500
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
+	print("NOW")
+	for i in range(1, path_to_folow.size()):
+		print(path_to_folow[i-1].distance_to(path_to_folow[i]))
 	if path_to_folow.size() > 0:
 		if path_follow ==true:
 			if self.global_position.distance_to(path_to_folow[point_to_loffow])>4:
@@ -36,7 +32,7 @@ func _input(event):
 	if event is InputEventMouseMotion && active==true:
 		if path_to_folow.size()==0:
 			path_to_folow.append(get_global_mouse_position())
-		if self.global_position.distance_to(path_to_folow[path_to_folow.size()-1])>18:
+		if get_global_mouse_position().distance_to(path_to_folow[path_to_folow.size()-1])>18:
 			path_to_folow.append(get_global_mouse_position())
 			$Line2D.add_point(get_global_mouse_position())
 	if event is InputEventMouseButton:
@@ -49,13 +45,8 @@ func _input(event):
 			active =true
 
 
-
-
 func _on_Area2D_mouse_entered():
 	mouse_over=true
-	pass # Replace with function body.
-
 
 func _on_Area2D_mouse_exited():
 	mouse_over=false
-	pass # Replace with function body.
