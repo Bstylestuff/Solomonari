@@ -6,7 +6,7 @@ var max_enemies:int = 0
 var enemy_spawn_rate:int = 0
 var randomizer
 
-func _on_ready():
+func prep_rand():
 	randomizer=RandomNumberGenerator.new()
 	randomizer.randomize()
 	
