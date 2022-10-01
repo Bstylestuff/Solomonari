@@ -8,4 +8,3 @@ func _ready():
 	if(mobile):
 		$pauseButton.show()
 	GameState.prep_rand()
-
