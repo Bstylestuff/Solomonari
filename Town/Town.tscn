@@ -107,6 +107,7 @@ frame = 4
 position = Vector2( 0, -27.1429 )
 texture = ExtResource( 3 )
 hframes = 9
+frame = 8
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
 anims/RAIN = ExtResource( 7 )

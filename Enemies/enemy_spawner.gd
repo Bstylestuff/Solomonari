@@ -6,13 +6,10 @@ var towns=[]
 export (String, "turk","mag","tatar","rus") var enemy_id
 var enemy_data = {"turk": {"img":"res://Enemies/Enemy1/Art/Visual/turk.png", "speed":120, "hp":5}, "mag": {"img":"res://Enemies/Enemy1/Art/Visual/mag.png", "speed":80, "hp":7}, "tatar": {"img":"res://Enemies/Enemy1/Art/Visual/tatar.png", "speed":160, "hp":3} , "rus": {"img":"res://Enemies/Enemy1/Art/Visual/rus.png", "speed":90, "hp":10}}
 
-var rng = RandomNumberGenerator.new()
-
 func _ready():
 	var targ_res= enemy_data[enemy_id]
 	loaded_resource = load(enemy_data[enemy_id]["img"])
 	towns = get_tree().get_nodes_in_group("towns")
-	rng.randomize()
 	spawn()
 
 func spawn():
@@ -28,7 +25,7 @@ func spawn():
 	get_parent().get_node("enemy").add_child(new_enemy)
 
 func get_target():
-	var random_target = rng.randi_range(0,towns.size()-1)
+	var random_target = GameState.randomizer.randi_range(0,towns.size()-1)
 	return towns[random_target].global_position
 
 func i_died():

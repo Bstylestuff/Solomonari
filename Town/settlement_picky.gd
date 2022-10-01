@@ -12,6 +12,6 @@ func _init():
 	tolerance = 7
 	money_per_tick = 10
 	happiness_level = 3
-	is_threatened = false
+	is_sieged = false
 	required_food = 70
 	stored_food = 0

@@ -91,7 +91,6 @@ func _die():
 
 func rain(amount):
 	crops+=amount
-	print(amount)
 	
 func _birth():
 	if(GameState.randomizer.randi_range(0,100)>40):

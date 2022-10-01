@@ -56,8 +56,6 @@ func _on_Area2D_area_entered(area):
 	if (area.is_in_group("Town")):
 		area.get_parent().rain(5)
 		ttl-=5
-		
-	
 
 func _on_Area2D_area_exited(area):
 	$AnimatedSprite.play("Idle")
