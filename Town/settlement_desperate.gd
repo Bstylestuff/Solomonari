@@ -1,9 +1,5 @@
 extends settlement_base
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 class_name desperate_settlement
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,3 +16,4 @@ func _init():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+

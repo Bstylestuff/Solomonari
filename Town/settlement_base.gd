@@ -1,6 +1,5 @@
 extends Node2D
 
-
 class_name settlement_base
 var money_per_tick: int = 0
 var happiness_level: int = 0

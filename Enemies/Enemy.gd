@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
-var target= null
+var target= Vector2(0,0)
 var hp = 5
-
+var my_owner = null
 var speed = 100
 
 func _ready():
@@ -35,5 +35,6 @@ func set_target(object):
 func deal_damage():
 	hp-=1
 	if hp ==0:
+		my_owner.i_died()
 		self.queue_free()
 	return
