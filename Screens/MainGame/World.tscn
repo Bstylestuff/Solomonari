@@ -1,9 +1,24 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Screens/MainGame/World.gd" type="Script" id=2]
 [ext_resource path="res://Mountain/Mountain.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Screens/MainGame/Map/Map.tscn" type="PackedScene" id=4]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 82, 8, 49, 4, 58, -18 )
+polygons = [ PoolIntArray( 0, 1, 2 ) ]
+outlines = [ PoolVector2Array( 58, -18, 49, 4, 82, 8 ) ]
+
+[sub_resource type="NavigationPolygon" id=2]
+vertices = PoolVector2Array( 76, -17, 68, -7, 58, -18 )
+polygons = [ PoolIntArray( 0, 1, 2 ) ]
+outlines = [ PoolVector2Array( 58, -18, 68, -7, 76, -17 ) ]
+
+[sub_resource type="NavigationPolygon" id=3]
+vertices = PoolVector2Array( 83, -1, 71, 0, 76, -5 )
+polygons = [ PoolIntArray( 0, 1, 2 ) ]
+outlines = [ PoolVector2Array( 76, -5, 71, 0, 83, -1 ) ]
 
 [node name="World" type="Node2D"]
 script = ExtResource( 2 )
@@ -23,5 +38,14 @@ position = Vector2( -146, -9 )
 
 [node name="Map" parent="." instance=ExtResource( 4 )]
 position = Vector2( -12, 2 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Map"]
+navpoly = SubResource( 1 )
+
+[node name="NavigationPolygonInstance2" type="NavigationPolygonInstance" parent="Map"]
+navpoly = SubResource( 2 )
+
+[node name="NavigationPolygonInstance3" type="NavigationPolygonInstance" parent="Map"]
+navpoly = SubResource( 3 )
 
 [connection signal="pressed" from="pauseButton" to="." method="_on_pauseButton_pressed"]

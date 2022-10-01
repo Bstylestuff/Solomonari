@@ -8,6 +8,34 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "settlement_base",
+"class": "desperate_settlement",
+"language": "GDScript",
+"path": "res://Town/settlement_desperate.gd"
+}, {
+"base": "settlement_base",
+"class": "picky_settlement",
+"language": "GDScript",
+"path": "res://Town/settlement_picky.gd"
+}, {
+"base": "Node2D",
+"class": "settlement_base",
+"language": "GDScript",
+"path": "res://Town/settlement_base.gd"
+}, {
+"base": "settlement_base",
+"class": "standard_settlement",
+"language": "GDScript",
+"path": "res://Town/settlement_standard.gd"
+} ]
+_global_script_class_icons={
+"desperate_settlement": "",
+"picky_settlement": "",
+"settlement_base": "",
+"standard_settlement": ""
+}
+
 [application]
 
 config/name="Solomonari"

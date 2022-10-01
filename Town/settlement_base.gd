@@ -1,9 +1,6 @@
-extends Node
+extends Node2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 class_name settlement_base
 var money_per_tick: int = 0
 var happiness_level: int = 0
@@ -11,11 +8,7 @@ var required_food: int = 0
 var stored_food: int = 0
 var tolerance: int = 0
 var is_threatened: bool = false
-	
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 # Food grows when the crops are watered. If stored_food >= required_food happiness increases 
 func _init():
 	money_per_tick = 5
