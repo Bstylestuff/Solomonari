@@ -3,25 +3,25 @@ extends Node2D
 const enemt_template = preload("res://Enemies/Enemy.tscn")
 var loaded_resource=null
 var towns=[]
-export (String, "turk","mag","tatar","rus") var enemy_id
+export (String, "turk","mag","hun","rus") var enemy_id
 var enemy_data = {
 	"turk": 
 		{"img":"res://Enemies/turk/Art/Visual/turk.png", 
 		"speed":6, 
 		"hp":5, 
-		"spawn_time_max":30, 
+		"spawn_time_max":15, 
 		"spawn_time_min":10 
 		}, 
 	"mag": 
 		{"img":"res://Enemies/Enemy1/Art/Visual/mag.png", 
 		"speed":5, 
-		"hp":7 , 
-		"spawn_time_max":15, 
-		"spawn_time_min":30
+		"hp":6 , 
+		"spawn_time_max":20, 
+		"spawn_time_min":13
 		}, 
 	"hun": 
-		{"img":"res://Enemies/hun/Art/Visual/Enemy1.png", 
-		"speed":13, 
+		{"img":"res://Enemies/hun/Art/Visual/Enemy.png", 
+		"speed":16, 
 		"hp":3, 
 		"spawn_time_max":30, 
 		"spawn_time_min":25
@@ -29,9 +29,9 @@ var enemy_data = {
 	"rus": 
 		{"img":"res://Enemies/Enemy1/Art/Visual/rus.png", 
 		"speed":3, 
-		"hp":10,
+		"hp":13,
 		"spawn_time_max":40, 
-		"spawn_time_min":20
+		"spawn_time_min":30
 		}
 	}
 

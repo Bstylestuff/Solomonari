@@ -116,11 +116,11 @@ enemy_id = "turk"
 
 [node name="sudnode2" parent="." instance=ExtResource( 5 )]
 position = Vector2( -168, 142 )
-enemy_id = "tatar"
+enemy_id = "turk"
 
 [node name="westnode1" parent="." instance=ExtResource( 5 )]
 position = Vector2( -245, 39 )
-enemy_id = "turk"
+enemy_id = "mag"
 
 [node name="westnode" parent="." instance=ExtResource( 5 )]
 position = Vector2( -264, 0 )
@@ -128,7 +128,7 @@ enemy_id = "mag"
 
 [node name="westnode2" parent="." instance=ExtResource( 5 )]
 position = Vector2( -208, -72 )
-enemy_id = "tatar"
+enemy_id = "mag"
 
 [node name="nordspawn" parent="." instance=ExtResource( 5 )]
 position = Vector2( 77, -184 )
@@ -144,11 +144,11 @@ enemy_id = "rus"
 
 [node name="estspawn" parent="." instance=ExtResource( 5 )]
 position = Vector2( 187, -170 )
-enemy_id = "tatar"
+enemy_id = "hun"
 
 [node name="estspawn2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 218, -107 )
-enemy_id = "tatar"
+enemy_id = "hun"
 
 [node name="mountain_spawner_1" parent="." instance=ExtResource( 3 )]
 position = Vector2( -101, -44 )
