@@ -6,14 +6,14 @@ var towns=[]
 export (String, "turk","mag","hun","rus") var enemy_id
 var enemy_data = {
 	"turk": 
-		{"img":"res://Enemies/turk/Art/Visual/turk.png", 
+		{"img":"res://Enemies/turk/Art/Visual/Enemy.png", 
 		"speed":6, 
 		"hp":5, 
 		"spawn_time_max":15, 
 		"spawn_time_min":10 
 		}, 
 	"mag": 
-		{"img":"res://Enemies/Enemy1/Art/Visual/mag.png", 
+		{"img":"res://Enemies/mag/Art/Visual/Enemy.png", 
 		"speed":5, 
 		"hp":6 , 
 		"spawn_time_max":20, 
@@ -28,7 +28,7 @@ var enemy_data = {
 		"spawn_time_min":25
 		} , 
 	"rus": 
-		{"img":"res://Enemies/Enemy1/Art/Visual/rus.png", 
+		{"img":"res://Enemies/rus/Art/Visual/Enemy.png", 
 		"speed":3, 
 		"hp":13,
 		"spawn_time_max":40, 
