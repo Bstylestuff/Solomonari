@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Town/settlement_base.gd" type="Script" id=1]
 [ext_resource path="res://Town/Town1.png" type="Texture" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Town/WantRain.tres" type="Animation" id=6]
 [ext_resource path="res://Town/RAIN.tres" type="Animation" id=7]
 [ext_resource path="res://Town/TownDissolve.tres" type="Animation" id=8]
+[ext_resource path="res://Town/FeelBubble.png" type="Texture" id=9]
+[ext_resource path="res://Town/TownAngry.tres" type="Animation" id=10]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 25.0
@@ -50,6 +52,30 @@ tracks/2/keys = {
 "update": 0,
 "values": [ true ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("FeelBubble:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("FeelBubble:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
 
 [node name="Town" type="Node2D" groups=["towns"]]
 scale = Vector2( 0.7, 0.7 )
@@ -66,6 +92,9 @@ position = Vector2( 0, 7 )
 shape = SubResource( 1 )
 
 [node name="FeelBubble" type="Sprite" parent="."]
+position = Vector2( -28.5714, -20 )
+texture = ExtResource( 9 )
+hframes = 6
 
 [node name="NeedBubble" type="Sprite" parent="."]
 position = Vector2( 12.8571, -14.2857 )
@@ -83,6 +112,7 @@ hframes = 9
 anims/RAIN = ExtResource( 7 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Angry = ExtResource( 10 )
 anims/Dissolve = ExtResource( 8 )
 anims/RAIN = ExtResource( 7 )
 anims/RESET = SubResource( 2 )
