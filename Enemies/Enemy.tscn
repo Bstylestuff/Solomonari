@@ -8,6 +8,7 @@
 extents = Vector2( 26.163, 25.8094 )
 
 [node name="enemy_body" type="KinematicBody2D" groups=["enemies"]]
+scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 2 )
 
 [node name="Frame" type="Sprite" parent="."]
@@ -18,10 +19,10 @@ texture = ExtResource( 3 )
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["enemies"]]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 0.249999, 0.75 )
 rotation = 0.785398
-scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
