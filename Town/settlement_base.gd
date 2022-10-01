@@ -18,6 +18,17 @@ var min_crops:int = 10
 var turn_duration:int = 5
 var curr_turn:float=0
 
+
+var sounds = {
+	"pay": "res://Town/Art/Audio/pickup_money.wav",
+	"anger":"res://Town/Art/Audio/town_angry.wav",
+	"need":"res://Town/Art/Audio/town_needs_water.wav"}
+
+func _ready():
+	sounds["pay"]=load(sounds["pay"])
+	sounds["anger"]=load(sounds["anger"])
+	sounds["need"]=load(sounds["need"])
+	
 func _init():
 	money_per_tick = 5
 	happiness_level = 10
@@ -76,12 +87,18 @@ func siege():
 
 func pay():
 	$AnimationPlayer.play("TownPay")
+	$AudioStreamPlayer2D.stream=sounds["pay"]
+	$AudioStreamPlayer2D.play()
 
 func _need():
 	$AnimationPlayer.play("WantRain")
+	$AudioStreamPlayer2D.stream=sounds["need"]
+	$AudioStreamPlayer2D.play()
 
 func _anger():
 	$AnimationPlayer.play("Angry")
+	$AudioStreamPlayer2D.stream=sounds["anger"]
+	$AudioStreamPlayer2D.play()
 
 func _pay_up():
 	GameState.add_score(population)

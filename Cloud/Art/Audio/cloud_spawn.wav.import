@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/cloud_spawn.wav-4cdf907c08af8a183d8fe869a04be1c0.sample"
+path="res://.import/cloud_spawn.wav-628cdb035f8ec7151b8de2843f658524.sample"
 
 [deps]
 
-source_file="res://Sounds/SFX/cloud_spawn.wav"
-dest_files=[ "res://.import/cloud_spawn.wav-4cdf907c08af8a183d8fe869a04be1c0.sample" ]
+source_file="res://Cloud/Art/Audio/cloud_spawn.wav"
+dest_files=[ "res://.import/cloud_spawn.wav-628cdb035f8ec7151b8de2843f658524.sample" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/town_needs_water.wav-83daebec60d0ae96cae5fd5fb5531382.sample"
+path="res://.import/town_needs_water.wav-787807b2cee09abc2b3a07b90ac03b00.sample"
 
 [deps]
 
-source_file="res://Sounds/SFX/town_needs_water.wav"
-dest_files=[ "res://.import/town_needs_water.wav-83daebec60d0ae96cae5fd5fb5531382.sample" ]
+source_file="res://Town/Art/Audio/town_needs_water.wav"
+dest_files=[ "res://.import/town_needs_water.wav-787807b2cee09abc2b3a07b90ac03b00.sample" ]
 
 [params]
 

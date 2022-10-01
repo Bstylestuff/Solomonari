@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/town_angry.wav-fc6e881d1dc77193ad71c33f61114849.sample"
+path="res://.import/town_angry.wav-cbc380a313335e8f638e0708a4059d80.sample"
 
 [deps]
 
-source_file="res://Sounds/SFX/town_angry.wav"
-dest_files=[ "res://.import/town_angry.wav-fc6e881d1dc77193ad71c33f61114849.sample" ]
+source_file="res://Town/Art/Audio/town_angry.wav"
+dest_files=[ "res://.import/town_angry.wav-cbc380a313335e8f638e0708a4059d80.sample" ]
 
 [params]
 

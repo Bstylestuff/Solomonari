@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/pickup_money.wav-a00281695169f424f8b4fc15259adfab.sample"
+path="res://.import/pickup_money.wav-8e1258a3661277d5b5b4caec9d9d062f.sample"
 
 [deps]
 
-source_file="res://Sounds/SFX/pickup_money.wav"
-dest_files=[ "res://.import/pickup_money.wav-a00281695169f424f8b4fc15259adfab.sample" ]
+source_file="res://Town/Art/Audio/pickup_money.wav"
+dest_files=[ "res://.import/pickup_money.wav-8e1258a3661277d5b5b4caec9d9d062f.sample" ]
 
 [params]
 
