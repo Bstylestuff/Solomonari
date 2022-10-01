@@ -11,6 +11,5 @@ func spawn():
 	new_cloud.set_owner(self)
 	get_parent().get_node("Clouds").add_child(new_cloud)
 
-
 func im_dead():
 	spawn()

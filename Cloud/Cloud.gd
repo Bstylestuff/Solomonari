@@ -66,7 +66,7 @@ func _on_Area2D_mouse_exited():
 func _on_AnimatedSprite_animation_finished():
 	if $AnimatedSprite.animation == "Attack":
 		for i in $Area2D.get_overlapping_areas():
-			if i!=null:
-				ttl-=1
+			if i!=null and i.is_in_group("enemies"):
 				i.get_parent().deal_damage()
+				ttl-=1
 	pass # Replace with function body.

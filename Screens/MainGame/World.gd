@@ -9,6 +9,6 @@ func _ready():
 		$pauseButton.show()
 
 func _on_pauseButton_pressed():
-	$Mountain.spawn()
+	
 	$Map/Town.need()
 

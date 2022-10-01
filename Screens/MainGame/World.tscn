@@ -48,8 +48,6 @@ modulate = Color( 0.596078, 0.0941176, 0.0941176, 1 )
 position = Vector2( 254, -178 )
 normal = ExtResource( 1 )
 
-[node name="Clouds" type="Node" parent="."]
-
 [node name="Map" parent="." instance=ExtResource( 4 )]
 position = Vector2( -12, 2 )
 rotation = 0.000698423
@@ -172,5 +170,7 @@ position = Vector2( 33, -91 )
 
 [node name="Node2D10" parent="." instance=ExtResource( 3 )]
 position = Vector2( 17, 38 )
+
+[node name="Clouds" type="Node" parent="."]
 
 [connection signal="pressed" from="pauseButton" to="." method="_on_pauseButton_pressed"]
