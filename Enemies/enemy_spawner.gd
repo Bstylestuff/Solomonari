@@ -13,7 +13,7 @@ func _ready():
 func spawn():
 	var new_enemy = enemt_template.instance()
 	var target = get_target()
-	print(target)
+	new_enemy.set_owner(self)
 	new_enemy.set_target(target)
 	new_enemy.global_position=self.global_position
 	get_parent().get_node("enemy").add_child(new_enemy)

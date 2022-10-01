@@ -18,6 +18,9 @@ func _physics_process(_delta):
 		var velocity = self.global_position.direction_to(next_location)*speed*_delta 
 		velocity = move_and_slide(velocity)
 
+func set_owner(obj):
+	my_owner=obj
+	return
 
 func set_speed(new_speed):
 	speed=new_speed
