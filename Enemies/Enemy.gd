@@ -16,7 +16,7 @@ func _physics_process(_delta):
 		
 		var next_location = $NavigationAgent2D.get_next_location()
 		
-		var velocity = self.global_position.direction_to(next_location)*speed*_delta
+		var velocity = self.global_position.direction_to(next_location)*speed
 		velocity = move_and_slide(velocity)
 
 func set_image(img):

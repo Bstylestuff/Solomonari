@@ -4,7 +4,7 @@ const enemt_template = preload("res://Enemies/Enemy.tscn")
 var loaded_resource=null
 var towns=[]
 export (String, "turk","mag","tatar","rus") var enemy_id
-var enemy_data = {"turk": {"img":"res://Enemies/Enemy1/Art/Visual/turk.png", "speed":120, "hp":5}, "mag": {"img":"res://Enemies/Enemy1/Art/Visual/mag.png", "speed":80, "hp":7}, "tatar": {"img":"res://Enemies/Enemy1/Art/Visual/tatar.png", "speed":160, "hp":3} , "rus": {"img":"res://Enemies/Enemy1/Art/Visual/rus.png", "speed":90, "hp":10}}
+var enemy_data = {"turk": {"img":"res://Enemies/Enemy1/Art/Visual/turk.png", "speed":6, "hp":5, "spawn_time_max":30, "spawn_time_min":10 }, "mag": {"img":"res://Enemies/Enemy1/Art/Visual/mag.png", "speed":5, "hp":7 , "spawn_time_max":15, "spawn_time_min":30}, "tatar": {"img":"res://Enemies/Enemy1/Art/Visual/tatar.png", "speed":13, "hp":3, "spawn_time_max":30, "spawn_time_min":25} , "rus": {"img":"res://Enemies/Enemy1/Art/Visual/rus.png", "speed":3, "hp":10,"spawn_time_max":40, "spawn_time_min":20}}
 
 func _ready():
 	if(GameState.randomizer==null):
@@ -12,13 +12,11 @@ func _ready():
 	var targ_res= enemy_data[enemy_id]
 	loaded_resource = load(enemy_data[enemy_id]["img"])
 	towns = get_tree().get_nodes_in_group("towns")
-	spawn()
+	i_died()
 
 func spawn():
 	var new_enemy = enemt_template.instance()
-	#var target = 
 	new_enemy.set_owner(self)
-	print(towns)
 	new_enemy.set_speed(enemy_data[enemy_id]["speed"])
 	new_enemy.set_hp(enemy_data[enemy_id]["hp"])
 	new_enemy.set_image(loaded_resource)
@@ -32,7 +30,7 @@ func get_target():
 	return towns[random_target].global_position
 
 func i_died():
-	$Timer.set_wait_time(GameState.randomizer.randi_range(10,25))
+	$Timer.set_wait_time(GameState.randomizer.randi_range(enemy_data[enemy_id]["spawn_time_min"],enemy_data[enemy_id]["spawn_time_max"]))
 	$Timer.start(0)
 	pass
 
