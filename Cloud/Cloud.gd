@@ -14,7 +14,7 @@ func _process(delta):
 	if path_to_folow.size() > 0:
 		if path_follow ==true:
 			if self.global_position.distance_to(path_to_folow[point_to_loffow])>4:
-				self.move_and_slide((-self.global_position+path_to_folow[point_to_loffow]).normalized()*100)
+				self.move_and_slide((-self.global_position+path_to_folow[point_to_loffow]).normalized()*50)
 
 
 	if point_to_loffow < path_to_folow.size() &&  self.global_position.distance_to(path_to_folow[point_to_loffow])<4 :
@@ -52,9 +52,16 @@ func _on_Area2D_area_entered(area):
 	if(area.is_in_group("enemies")):
 		area.get_parent().deal_damage()
 		$AnimatedSprite.play("Attack")
+		$storm_avoid.enabled=false
+	if (area.is_in_group("Town")):
+		area.rain(5)
+		ttl-=5
+		
+	
 
 func _on_Area2D_area_exited(area):
 	$AnimatedSprite.play("Idle")
+	$storm_avoid.enabled=true
 
 func _on_Area2D_mouse_entered():
 	mouse_over=true
@@ -68,5 +75,12 @@ func _on_AnimatedSprite_animation_finished():
 		for i in $Area2D.get_overlapping_areas():
 			if i!=null and i.is_in_group("enemies"):
 				i.get_parent().deal_damage()
-				ttl-=1
+				ttl-=4
+	elif $AnimatedSprite.animation == "Idle":
+		for i in $Area2D.get_overlapping_areas():
+			if i!=null and i.is_in_group("Town"):
+				ttl-=5
+				i.rain(5)
+		ttl -=1 
+	
 	pass # Replace with function body.
