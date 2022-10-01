@@ -4,7 +4,36 @@ const enemt_template = preload("res://Enemies/Enemy.tscn")
 var loaded_resource=null
 var towns=[]
 export (String, "turk","mag","tatar","rus") var enemy_id
-var enemy_data = {"turk": {"img":"res://Enemies/Enemy1/Art/Visual/turk.png", "speed":6, "hp":5, "spawn_time_max":30, "spawn_time_min":10 }, "mag": {"img":"res://Enemies/Enemy1/Art/Visual/mag.png", "speed":5, "hp":7 , "spawn_time_max":15, "spawn_time_min":30}, "tatar": {"img":"res://Enemies/Enemy1/Art/Visual/tatar.png", "speed":13, "hp":3, "spawn_time_max":30, "spawn_time_min":25} , "rus": {"img":"res://Enemies/Enemy1/Art/Visual/rus.png", "speed":3, "hp":10,"spawn_time_max":40, "spawn_time_min":20}}
+var enemy_data = {
+	"turk": 
+		{"img":"res://Enemies/turk/Art/Visual/turk.png", 
+		"speed":6, 
+		"hp":5, 
+		"spawn_time_max":30, 
+		"spawn_time_min":10 
+		}, 
+	"mag": 
+		{"img":"res://Enemies/Enemy1/Art/Visual/mag.png", 
+		"speed":5, 
+		"hp":7 , 
+		"spawn_time_max":15, 
+		"spawn_time_min":30
+		}, 
+	"hun": 
+		{"img":"res://Enemies/hun/Art/Visual/Enemy1.png", 
+		"speed":13, 
+		"hp":3, 
+		"spawn_time_max":30, 
+		"spawn_time_min":25
+		} , 
+	"rus": 
+		{"img":"res://Enemies/Enemy1/Art/Visual/rus.png", 
+		"speed":3, 
+		"hp":10,
+		"spawn_time_max":40, 
+		"spawn_time_min":20
+		}
+	}
 
 func _ready():
 	if(GameState.randomizer==null):

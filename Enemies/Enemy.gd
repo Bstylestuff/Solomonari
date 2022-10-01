@@ -10,7 +10,7 @@ var target_town=null
 
 var sounds = {
 	"siege": "res://Enemies/Enemy1/Art/Audio/enemy_hits_town.wav",
-	"thunderStruck":"res://Enemies/Enemy1/Art/Audio/enemy_hit_by_cloud.wav"}
+	"thunderStruck":"res://Enemies/turk/Art/Audio/enemy_hit_by_cloud.wav"}
 
 func _ready():
 	$NavigationAgent2D.set_target_location(global_position)

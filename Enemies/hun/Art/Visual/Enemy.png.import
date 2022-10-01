@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tatar.png-fc95d5f35238f7daef11a6e64e797e35.stex"
+path="res://.import/Enemy.png-7cdd875fa980aefa410d78172200c5ff.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/Enemy1/Art/Visual/tatar.png"
-dest_files=[ "res://.import/tatar.png-fc95d5f35238f7daef11a6e64e797e35.stex" ]
+source_file="res://Enemies/hun/Art/Visual/Enemy.png"
+dest_files=[ "res://.import/Enemy.png-7cdd875fa980aefa410d78172200c5ff.stex" ]
 
 [params]
 

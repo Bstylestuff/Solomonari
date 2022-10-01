@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/enemy_hits_town.wav-67c05f81bd26c3be4c4d621d2e70e239.sample"
+path="res://.import/enemy_hit_by_cloud.wav-4f1506822df92a2939936d0f588ded1f.sample"
 
 [deps]
 
-source_file="res://Enemies/Enemy1/Art/Audio/enemy_hits_town.wav"
-dest_files=[ "res://.import/enemy_hits_town.wav-67c05f81bd26c3be4c4d621d2e70e239.sample" ]
+source_file="res://Enemies/turk/Art/Audio/enemy_hit_by_cloud.wav"
+dest_files=[ "res://.import/enemy_hit_by_cloud.wav-4f1506822df92a2939936d0f588ded1f.sample" ]
 
 [params]
 

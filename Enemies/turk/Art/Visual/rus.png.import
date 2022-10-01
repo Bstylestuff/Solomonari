@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rus.png-3b81cac95ebb126502765803e2090ef4.stex"
+path="res://.import/rus.png-b26f6dc01dd97266ddd4af66440c0be6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/Enemy1/Art/Visual/rus.png"
-dest_files=[ "res://.import/rus.png-3b81cac95ebb126502765803e2090ef4.stex" ]
+source_file="res://Enemies/turk/Art/Visual/rus.png"
+dest_files=[ "res://.import/rus.png-b26f6dc01dd97266ddd4af66440c0be6.stex" ]
 
 [params]
 
