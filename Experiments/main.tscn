@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Experiments/start_button.gd" type="Script" id=1]
 [ext_resource path="res://Experiments/options_button.gd" type="Script" id=2]
 [ext_resource path="res://Experiments/credits_button.gd" type="Script" id=3]
 [ext_resource path="res://Experiments/exit_button.gd" type="Script" id=4]
+[ext_resource path="res://new_theme.tres" type="Theme" id=5]
+[ext_resource path="res://Experiments/Font.TTF" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 6 )
 
 [node name="Matin window" type="Node2D"]
 
@@ -11,6 +16,7 @@
 margin_top = 9.0
 margin_right = 640.0
 margin_bottom = 107.0
+theme = ExtResource( 5 )
 text = "<Insert game description and goals here> 
 "
 
@@ -19,6 +25,8 @@ margin_left = 240.0
 margin_top = 106.0
 margin_right = 398.0
 margin_bottom = 156.0
+theme = ExtResource( 5 )
+custom_fonts/font = SubResource( 1 )
 text = "Start Game"
 script = ExtResource( 1 )
 
@@ -27,6 +35,7 @@ margin_left = 240.0
 margin_top = 160.0
 margin_right = 400.0
 margin_bottom = 210.0
+theme = ExtResource( 5 )
 text = "Options"
 align = 1
 script = ExtResource( 2 )
@@ -36,6 +45,7 @@ margin_left = 240.0
 margin_top = 212.0
 margin_right = 400.0
 margin_bottom = 262.0
+theme = ExtResource( 5 )
 text = "Credits"
 script = ExtResource( 3 )
 
@@ -44,6 +54,7 @@ margin_left = 240.0
 margin_top = 264.0
 margin_right = 400.0
 margin_bottom = 314.0
+theme = ExtResource( 5 )
 text = "Quit Game"
 script = ExtResource( 4 )
 
