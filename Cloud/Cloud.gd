@@ -6,6 +6,7 @@ var active = false
 var path_follow=true
 var point_to_loffow=0
 var path_to_folow=[]
+var my_owner=null
 export var  ttl = 200
 export var granulation = 18
 
@@ -22,7 +23,8 @@ func _process(delta):
 	if point_to_loffow == path_to_folow.size():
 		path_to_folow.clear()
 		point_to_loffow =0
-	if ttl==0:
+	if ttl<=0:
+		my_owner.im_dead()
 		self.queue_free()
 	$Line2D.global_position=Vector2(0,0)
 
@@ -42,6 +44,10 @@ func _input(event):
 			point_to_loffow=0
 			active =true
 
+func set_owner(obj):
+	my_owner=obj
+	return
+
 func _on_Area2D_area_entered(area):
 	if(area.is_in_group("enemies")):
 		area.get_parent().deal_damage()
@@ -55,3 +61,12 @@ func _on_Area2D_mouse_entered():
 
 func _on_Area2D_mouse_exited():
 	mouse_over=false
+
+
+func _on_AnimatedSprite_animation_finished():
+	if $AnimatedSprite.animation == "Attack":
+		for i in $Area2D.get_overlapping_areas():
+			if i!=null:
+				ttl-=1
+				i.get_parent().deal_damage()
+	pass # Replace with function body.
