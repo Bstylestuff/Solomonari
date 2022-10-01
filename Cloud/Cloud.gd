@@ -12,6 +12,15 @@ var past_positions=[]
 var max_past_positions=10
 var moving:bool=false
 
+var sounds = {
+	"spawn": "res://Cloud/Art/Audio/cloud_spawn.wav"
+	}
+
+func _ready():
+	sounds["spawn"]=load(sounds["spawn"])
+	$AudioStreamPlayer2D.stream=sounds["spawn"]
+	$AudioStreamPlayer2D.play()
+	
 func _process(delta):
 	if path.size() > 0:
 		if self.global_position.distance_to(path[current_destination_point_index])>4:

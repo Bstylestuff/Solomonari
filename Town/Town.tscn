@@ -119,3 +119,6 @@ anims/RAIN = ExtResource( 7 )
 anims/RESET = SubResource( 2 )
 anims/TownPay = ExtResource( 5 )
 anims/WantRain = ExtResource( 6 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+bus = "SFX_town"
