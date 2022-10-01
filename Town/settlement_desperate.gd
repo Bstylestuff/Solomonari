@@ -12,8 +12,3 @@ func _init():
 	required_food = 30
 	stored_food = 0
 	
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-

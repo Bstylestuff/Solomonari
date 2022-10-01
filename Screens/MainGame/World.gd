@@ -10,4 +10,5 @@ func _ready():
 
 func _on_pauseButton_pressed():
 	$Mountain.spawn()
+	$Map/Town.pay()
 

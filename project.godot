@@ -46,6 +46,7 @@ config/icon="res://icon.png"
 [autoload]
 
 MapChanger="*res://Utils/MapChanger.gd"
+GameState="*res://Utils/GameState.gd"
 
 [display]
 

@@ -22,9 +22,12 @@ func _process(delta):
 		happiness_level = happiness_level - 1
 	if tolerance >= happiness_level:
 		return money_per_tick
+		
 func _threaten_city():
 	is_threatened = true
+
+func pay():
+	$AnimationPlayer.play("TownPay")
+func _pay_up():
+	GameState.add_score()
 	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass

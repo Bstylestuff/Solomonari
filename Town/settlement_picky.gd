@@ -15,4 +15,3 @@ func _init():
 	is_threatened = false
 	required_food = 70
 	stored_food = 0
-	
