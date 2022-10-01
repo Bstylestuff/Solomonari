@@ -10,11 +10,11 @@ var stored_food: int = 0
 var tolerance: int = 0
 var is_sieged: bool = false
 var can_pay:bool = false
-var curr_happiness_total:int = 300
-var hp: int = 300
-var crops:int = 500
+var curr_happiness_total:int = 30
+var hp: int = 30
+var crops:int = 50
 var population:int = 10
-var min_crops:int = 100
+var min_crops:int = 10
 var turn_duration:int = 5
 var curr_turn:float=0
 
@@ -28,7 +28,6 @@ func _physics_process(delta):
 	if(curr_turn>turn_duration):
 		_pass_turn()
 		curr_turn-=turn_duration
-		
 
 func _pass_turn():
 	_update_status()
@@ -92,6 +91,7 @@ func _die():
 
 func rain(amount):
 	crops+=amount
+	print(amount)
 	
 func _birth():
 	if(GameState.randomizer.randi_range(0,100)>40):

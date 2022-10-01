@@ -54,7 +54,7 @@ func _on_Area2D_area_entered(area):
 		$AnimatedSprite.play("Attack")
 		$storm_avoid.enabled=false
 	if (area.is_in_group("Town")):
-		area.rain(5)
+		area.get_parent().rain(5)
 		ttl-=5
 		
 	
@@ -80,7 +80,7 @@ func _on_AnimatedSprite_animation_finished():
 		for i in $Area2D.get_overlapping_areas():
 			if i!=null and i.is_in_group("Town"):
 				ttl-=5
-				i.rain(5)
+				i.get_parent().rain(5)
 		ttl -=1 
 	
 	pass # Replace with function body.
