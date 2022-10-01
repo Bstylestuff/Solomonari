@@ -47,7 +47,7 @@ func _on_Area2D_area_entered(area):
 		area.get_parent().deal_damage()
 		$AnimatedSprite.play("Attack")
 
-func _on_Area2D_area_exited():
+func _on_Area2D_area_exited(area):
 	$AnimatedSprite.play("Idle")
 
 func _on_Area2D_mouse_entered():

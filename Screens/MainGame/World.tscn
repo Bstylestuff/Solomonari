@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Screens/MainGame/World.gd" type="Script" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://Screens/MainGame/Map/Map.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Enemies/enemy_spawner.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Town/Town.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Enemies/Enemy.tscn" type="PackedScene" id=7]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( -111, 137, -121, 128, -126, 121, -129, 112, -123, 105, -119, 110, -100, 141, -117, 100, -124, 100, -119, 71, -109, 66, -88, 63, -73, 62, 86, 21, 90, 4, 173, 16, 175, 29, -89, 161, -99, 164, -106, 161, -111, 156, -106, 149, -80, 158, 178, 39, 77, 35, 222, 42, 236, 43, 254, 47, 256, 58, 256, 79, 245, 86, 230, 91, 205, 44, 205, 102, 198, 48, 183, 46, 57, 48, -84, 57, -80, 57, 165, 158, 162, 156, 162, 151, 173, 161, 154, 154, 149, 154, 147, 151, 159, 151, 206, 108, 205, 122, 200, 156, 195, 161, 191, 166, 185, 166, -7, 172, -15, 170, -17, 166, 8, 52, 0, 171, 136, 149, 131, 143, 118, 140, 108, 137, 96, 144, 84, 143, 77, 142, 40, 53, 21, 55, 67, 149, 54, 157, 51, 165, 45, 169, 34, 173, 26, 175, 17, 175, 12, 174, 7, 170, -28, 168, -30, 53, -24, 46, -11, 45, 0, 45, -31, 171, -39, 171, -50, 168, -56, 163, -47, 59, -63, 163, -70, 162 )
@@ -136,9 +135,6 @@ navpoly = SubResource( 4 )
 
 [node name="NavigationPolygonInstance5" type="NavigationPolygonInstance" parent="."]
 navpoly = SubResource( 5 )
-
-[node name="enemy_body" parent="." instance=ExtResource( 7 )]
-position = Vector2( 179, 127 )
 
 [node name="Node2D" parent="." instance=ExtResource( 5 )]
 position = Vector2( -82, 107 )
