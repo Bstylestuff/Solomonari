@@ -3,7 +3,7 @@ extends KinematicBody2D
 var target= Vector2(0,0)
 var hp = 5
 var my_owner = null
-var speed = 100
+var speed = 120
 
 func _ready():
 	$NavigationAgent2D.set_target_location(global_position)
