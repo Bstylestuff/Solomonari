@@ -3,7 +3,7 @@ extends Node2D
 const enemt_template = preload("res://Enemies/Enemy.tscn")
 var loaded_resource=null
 var towns=[]
-export (String, "turk","mag","tatar","rus") var enemy_id
+export (String, "turk","mag","hun","rus") var enemy_id
 var enemy_data = {
 	"turk": 
 		{"img":"res://Enemies/turk/Art/Visual/turk.png", 
@@ -20,7 +20,7 @@ var enemy_data = {
 		"spawn_time_min":30
 		}, 
 	"hun": 
-		{"img":"res://Enemies/hun/Art/Visual/Enemy1.png", 
+		{"img":"res://Enemies/hun/Art/Visual/Enemy.png", 
 		"speed":13, 
 		"hp":3, 
 		"spawn_time_max":30, 
