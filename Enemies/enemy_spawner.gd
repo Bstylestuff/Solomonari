@@ -18,7 +18,7 @@ func spawn():
 	var new_enemy = enemt_template.instance()
 	#var target = 
 	new_enemy.set_owner(self)
-	print(towns)
+	
 	new_enemy.set_speed(enemy_data[enemy_id]["speed"])
 	new_enemy.set_hp(enemy_data[enemy_id]["hp"])
 	new_enemy.set_image(loaded_resource)

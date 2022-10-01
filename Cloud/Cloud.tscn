@@ -1,17 +1,52 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Cloud/Art/Visual/Lightning.png" type="Texture" id=1]
 [ext_resource path="res://Cloud/Cloud.gd" type="Script" id=2]
 [ext_resource path="res://Cloud/Art/Visual/snek/tail.png" type="Texture" id=3]
+[ext_resource path="res://Cloud/Art/Visual/Trail/Trailtexture.tres" type="Texture" id=4]
+
+[sub_resource type="CanvasItemMaterial" id=15]
+blend_mode = 1
+light_mode = 1
+particles_animation = true
+particles_anim_h_frames = 2
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="Curve" id=16]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.958904, 0.009009 ), 0.50819, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=17]
+curve = SubResource( 16 )
+
+[sub_resource type="ParticlesMaterial" id=14]
+lifetime_randomness = 0.02
+trail_divisor = 8
+emission_shape = 3
+emission_point_texture = ExtResource( 4 )
+emission_point_count = 50
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 0.8
+scale_curve = SubResource( 17 )
+anim_speed = 6.29
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 12.0
 
 [sub_resource type="Curve" id=13]
-_data = [ Vector2( 0, 0 ), 0.0, -0.565315, 0, 0, Vector2( 1, 0.990991 ), -0.366031, 0.0, 0, 0 ]
+_data = [ Vector2( 0, 0.135135 ), 0.0, 0.275764, 0, 0, Vector2( 1, 0.990991 ), -0.366031, 0.0, 0, 0 ]
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 22.0227
+
+[sub_resource type="NavigationPolygon" id=12]
+vertices = PoolVector2Array( -25, 5, -21, -14, -12, -23, 15, -23, 27, -2, 16, 23, -12, 24 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6 ) ]
+outlines = [ PoolVector2Array( -12, 24, 16, 23, 27, -2, 15, -23, -12, -23, -21, -14, -25, 5 ) ]
 
 [sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 1 )
@@ -63,13 +98,17 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="NavigationPolygon" id=12]
-vertices = PoolVector2Array( -25, 5, -21, -14, -12, -23, 15, -23, 27, -2, 16, 23, -12, 24 )
-polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6 ) ]
-outlines = [ PoolVector2Array( -12, 24, 16, 23, 27, -2, 15, -23, -12, -23, -21, -14, -25, 5 ) ]
-
 [node name="Cloud" type="KinematicBody2D"]
 script = ExtResource( 2 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+material = SubResource( 15 )
+amount = 30
+lifetime = 3.0
+local_coords = false
+draw_order = 1
+process_material = SubResource( 14 )
+texture = ExtResource( 4 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -88,15 +127,16 @@ antialiased = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 11 )
-animation = "Idle"
-playing = true
-
 [node name="storm_avoid" type="NavigationPolygonInstance" parent="."]
 navpoly = SubResource( 12 )
 
 [node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="storm_avoid"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 11 )
+animation = "Idle"
+frame = 1
+playing = true
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_Area2D_area_exited"]
