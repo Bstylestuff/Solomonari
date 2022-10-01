@@ -145,18 +145,23 @@ navpoly = SubResource( 7 )
 
 [node name="Node2D" parent="." instance=ExtResource( 5 )]
 position = Vector2( -245, 39 )
+enemy_id = "turk"
 
 [node name="Node2D2" parent="." instance=ExtResource( 5 )]
 position = Vector2( -264, 0 )
+enemy_id = "mag"
 
 [node name="Node2D3" parent="." instance=ExtResource( 5 )]
 position = Vector2( -168, 142 )
+enemy_id = "tatar"
 
 [node name="Node2D4" parent="." instance=ExtResource( 5 )]
 position = Vector2( -208, -72 )
+enemy_id = "rus"
 
 [node name="Node2D5" parent="." instance=ExtResource( 5 )]
 position = Vector2( 92, 176 )
+enemy_id = "turk"
 
 [node name="Node2D6" parent="." instance=ExtResource( 3 )]
 position = Vector2( -101, -44 )

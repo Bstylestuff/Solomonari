@@ -1,13 +1,14 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Cloud/Art/Visual/Lightning.png" type="Texture" id=1]
 [ext_resource path="res://Cloud/Cloud.gd" type="Script" id=2]
+[ext_resource path="res://Cloud/Art/Visual/snek/tail.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 12.0
 
 [sub_resource type="Curve" id=13]
-_data = [ Vector2( 0.00796813, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+_data = [ Vector2( 0, 0 ), 0.0, -0.565315, 0, 0, Vector2( 1, 0.990991 ), -0.366031, 0.0, 0, 0 ]
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 22.0227
@@ -75,9 +76,14 @@ script = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 1 )
 
-[node name="Line2D" type="Line2D" parent="."]
+[node name="SnakeTrail" type="Line2D" parent="."]
 width_curve = SubResource( 13 )
-default_color = Color( 0.4, 0.501961, 1, 1 )
+default_color = Color( 1, 1, 1, 1 )
+texture = ExtResource( 3 )
+texture_mode = 1
+joint_mode = 2
+end_cap_mode = 2
+antialiased = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
@@ -85,7 +91,6 @@ shape = SubResource( 2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 11 )
 animation = "Idle"
-frame = 2
 playing = true
 
 [node name="storm_avoid" type="NavigationPolygonInstance" parent="."]
