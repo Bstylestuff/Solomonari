@@ -7,8 +7,4 @@ func _ready():
 		mobile=false
 	if(mobile):
 		$pauseButton.show()
-
-func _on_pauseButton_pressed():
-	
-	$Map/Town.need()
-
+	GameState.prep_rand()

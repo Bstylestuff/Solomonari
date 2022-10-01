@@ -3,6 +3,8 @@
 [ext_resource path="res://Experiments/Font.TTF" type="DynamicFontData" id=1]
 
 [sub_resource type="DynamicFont" id=1]
+extra_spacing_char = 1
+extra_spacing_space = 7
 font_data = ExtResource( 1 )
 
 [resource]
