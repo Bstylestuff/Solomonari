@@ -61,3 +61,4 @@ android/build/res/values/themes.xml
 android/build/settings.gradle
 android/build/src/com/godot/game/GodotApp.java
 export_presets.cfg
+*.pck

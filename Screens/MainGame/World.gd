@@ -10,6 +10,5 @@ func _ready():
 	GameState.prep_rand()
 
 func _on_pauseButton_pressed():
-	
 	$Map/Town.need()
 
