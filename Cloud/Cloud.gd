@@ -10,7 +10,6 @@ export var  ttl = 200
 export var granulation = 18
 
 func _process(delta):
-
 	if path_to_folow.size() > 0:
 		if path_follow ==true:
 			if self.global_position.distance_to(path_to_folow[point_to_loffow])>4:
