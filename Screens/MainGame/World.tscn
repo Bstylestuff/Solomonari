@@ -116,19 +116,15 @@ enemy_id = "turk"
 
 [node name="sudnode2" parent="." instance=ExtResource( 5 )]
 position = Vector2( -168, 142 )
-<<<<<<< HEAD
 enemy_id = "turk"
 
 [node name="westnode1" parent="." instance=ExtResource( 5 )]
 position = Vector2( -245, 39 )
-enemy_id = "mag"
-=======
 enemy_id = "hun"
 
 [node name="westnode1" parent="." instance=ExtResource( 5 )]
 position = Vector2( -245, 39 )
 enemy_id = "hun"
->>>>>>> b089fa87f8a66a0704678dac71c6781d0454ed3d
 
 [node name="westnode" parent="." instance=ExtResource( 5 )]
 position = Vector2( -264, 0 )
@@ -136,11 +132,7 @@ enemy_id = "mag"
 
 [node name="westnode2" parent="." instance=ExtResource( 5 )]
 position = Vector2( -208, -72 )
-<<<<<<< HEAD
-enemy_id = "mag"
-=======
 enemy_id = "turk"
->>>>>>> b089fa87f8a66a0704678dac71c6781d0454ed3d
 
 [node name="nordspawn" parent="." instance=ExtResource( 5 )]
 position = Vector2( 77, -184 )

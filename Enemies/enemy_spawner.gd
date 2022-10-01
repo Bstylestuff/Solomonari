@@ -21,11 +21,8 @@ var enemy_data = {
 		}, 
 	"hun": 
 		{"img":"res://Enemies/hun/Art/Visual/Enemy.png", 
-<<<<<<< HEAD
+
 		"speed":16, 
-=======
-		"speed":13, 
->>>>>>> b089fa87f8a66a0704678dac71c6781d0454ed3d
 		"hp":3, 
 		"spawn_time_max":30, 
 		"spawn_time_min":25

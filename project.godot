@@ -41,7 +41,6 @@ _global_script_class_icons={
 config/name="Solomonari"
 run/main_scene="res://Screens/Menus/MainMenu/MainMenu.tscn"
 config/icon="res://icon.png"
-<<<<<<<Updatedupstreamrun/main_scene="res://Screens/MainGame/World.tscn"
 
 [autoload]
 
