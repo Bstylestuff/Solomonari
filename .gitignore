@@ -62,3 +62,13 @@ android/build/settings.gradle
 android/build/src/com/godot/game/GodotApp.java
 export_presets.cfg
 *.pck
+*.wasm
+*.json
+*.html
+*.js
+build/Solomonacrdddi.144x144.png
+build/Solomonacrdddi.180x180.png
+build/Solomonacrdddi.512x512.png
+build/Solomonacrdddi.apple-touch-icon.png
+build/Solomonacrdddi.icon.png
+build/Solomonacrdddi.png
