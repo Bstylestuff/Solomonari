@@ -75,7 +75,7 @@ func _on_AnimatedSprite_animation_finished():
 		for i in $Area2D.get_overlapping_areas():
 			if i!=null and i.is_in_group("enemies"):
 				i.get_parent().deal_damage()
-				ttl-=4
+				ttl-=7
 	elif $AnimatedSprite.animation == "Idle":
 		for i in $Area2D.get_overlapping_areas():
 			if i!=null and i.is_in_group("Town"):
