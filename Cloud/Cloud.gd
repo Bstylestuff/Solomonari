@@ -10,14 +10,15 @@ export var granulation = .1
 export var max_trail_length=15
 var past_positions=[]
 var max_past_positions=10
-
-
+var moving:bool=false
 
 func _process(delta):
 	if path.size() > 0:
 		if self.global_position.distance_to(path[current_destination_point_index])>4:
 			self.move_and_slide((-self.global_position+path[current_destination_point_index]).normalized()*50)
-
+			if(not moving):
+				moving=true
+				$Particles2D.emitting=true
 	if current_destination_point_index < path.size() &&  self.global_position.distance_to(path[current_destination_point_index])<4 :
 		if($SnakeTrail.get_point_count()>0):
 			$SnakeTrail.remove_point(0)
@@ -27,6 +28,9 @@ func _process(delta):
 		path.clear()
 		$SnakeTrail.clear_points()
 		current_destination_point_index =0
+		if(moving):
+			moving=false
+			$Particles2D.emitting=false
 	if ttl<=0:
 		my_owner.im_dead()
 		self.queue_free()
