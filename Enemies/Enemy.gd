@@ -1,9 +1,10 @@
 extends KinematicBody2D
 
-var target= Vector2(0,0)
+var target= null
 var hp = 5
 var my_owner = null
 var speed = 120
+
 
 func _ready():
 	$NavigationAgent2D.set_target_location(global_position)
@@ -15,8 +16,12 @@ func _physics_process(_delta):
 		
 		var next_location = $NavigationAgent2D.get_next_location()
 		
-		var velocity = self.global_position.direction_to(next_location)*speed*_delta 
+		var velocity = self.global_position.direction_to(next_location)*speed*_delta
 		velocity = move_and_slide(velocity)
+
+func set_image(img):
+	$Sprite.texture=img
+	return
 
 func set_owner(obj):
 	my_owner=obj
