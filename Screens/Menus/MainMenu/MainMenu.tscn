@@ -14,16 +14,16 @@ anchor_bottom = 1.0
 alignment = 1
 
 [node name="TextEdit" type="TextEdit" parent="VBoxContainer"]
-margin_top = 33.0
+margin_top = 23.0
 margin_right = 640.0
-margin_bottom = 123.0
+margin_bottom = 133.0
 grow_horizontal = 2
 grow_vertical = 2
-rect_min_size = Vector2( 0, 90 )
+rect_min_size = Vector2( 0, 110 )
 theme = ExtResource( 5 )
-text = "<Insert game description and goals here> 
-"
+text = "Dragon riders, Solmonars. Known mostly for their begging-based tests of empathy and storm calling, now as forgotten as past deeds. Besieged on all sides, not even they can withstand the invaders' waves,  not even with their dragons and their mighty, furious storms."
 readonly = true
+fold_gutter = true
 context_menu_enabled = false
 shortcut_keys_enabled = false
 virtual_keyboard_enabled = false
@@ -31,11 +31,12 @@ middle_mouse_paste_enabled = false
 selecting_enabled = false
 deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
+wrap_enabled = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 127.0
+margin_top = 137.0
 margin_right = 640.0
-margin_bottom = 327.0
+margin_bottom = 337.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
