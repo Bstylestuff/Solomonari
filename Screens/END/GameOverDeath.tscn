@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://new_theme.tres" type="Theme" id=1]
 [ext_resource path="res://Screens/END/endgamescreen.gd" type="Script" id=2]
 [ext_resource path="res://Screens/END/Death.png" type="Texture" id=3]
+[ext_resource path="res://new_themeSHADOW.tres" type="Theme" id=4]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -22,11 +23,10 @@ margin_bottom = 327.0
 alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
-modulate = Color( 0, 0, 0, 1 )
 margin_right = 640.0
 margin_bottom = 108.0
 rect_min_size = Vector2( 640, 80 )
-theme = ExtResource( 1 )
+theme = ExtResource( 4 )
 text = "And so ends the story.
 
 Your storms are mighty and conviction commendable. But this alone could not stop the relentless waves of invaders from plundering the cities and their reaches.
