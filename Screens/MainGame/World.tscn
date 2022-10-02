@@ -153,18 +153,23 @@ enemy_id = "hun"
 [node name="Navmesh" type="Node" parent="."]
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navmesh"]
+visible = false
 navpoly = SubResource( 1 )
 
 [node name="NavigationPolygonInstance2" type="NavigationPolygonInstance" parent="Navmesh"]
+visible = false
 navpoly = SubResource( 2 )
 
 [node name="NavigationPolygonInstance3" type="NavigationPolygonInstance" parent="Navmesh"]
+visible = false
 navpoly = SubResource( 3 )
 
 [node name="NavigationPolygonInstance4" type="NavigationPolygonInstance" parent="Navmesh"]
+visible = false
 navpoly = SubResource( 4 )
 
 [node name="NavigationPolygonInstance5" type="NavigationPolygonInstance" parent="Navmesh"]
+visible = false
 navpoly = SubResource( 5 )
 
 [node name="Mountains" type="Node" parent="."]
