@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Neuschwanstein_Castle_entrance_gate.jpg-01875bd1bc718cf061fcd7ff46083221.stex"
+path="res://.import/Death.png-67e5eb9a8e9840250005986d0216ae68.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Screens/END/Neuschwanstein_Castle_entrance_gate.jpg"
-dest_files=[ "res://.import/Neuschwanstein_Castle_entrance_gate.jpg-01875bd1bc718cf061fcd7ff46083221.stex" ]
+source_file="res://Screens/END/Death.png"
+dest_files=[ "res://.import/Death.png-67e5eb9a8e9840250005986d0216ae68.stex" ]
 
 [params]
 

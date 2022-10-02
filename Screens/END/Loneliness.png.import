@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1407942640358_wps_12_Italy_Italy_Abandoned_mou.jpg-5c48d9e1a60a754bef229297e2bead48.stex"
+path="res://.import/Loneliness.png-63a4cea90cd183d0ec6f1483d48068a7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Screens/END/1407942640358_wps_12_Italy_Italy_Abandoned_mou.jpg"
-dest_files=[ "res://.import/1407942640358_wps_12_Italy_Italy_Abandoned_mou.jpg-5c48d9e1a60a754bef229297e2bead48.stex" ]
+source_file="res://Screens/END/Loneliness.png"
+dest_files=[ "res://.import/Loneliness.png-63a4cea90cd183d0ec6f1483d48068a7.stex" ]
 
 [params]
 

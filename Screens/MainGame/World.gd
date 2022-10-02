@@ -19,10 +19,6 @@ func get_towns():
 	return townList
 
 func _ready():
-	#var tutorial_position=get_viewport_rect()
-	$tutorial/Panel.rect_size=get_viewport_rect().size
-	$tutorial/Panel.set_global_position(get_viewport_rect().position-get_viewport_rect().size/2)
-
 	GameState.prep_rand()
 	townList=get_tree().get_nodes_in_group("towns")
 	total_towns=townList.size()
@@ -56,10 +52,3 @@ func _remove_town():
 
 func _game_over(reason: String):
 	MapChanger.goto_scene("res://Screens/END/GameOver"+reason+".tscn")
-
-
-func _on_tutorialbutton_button_down():
-	
-
-	$tutorial.popup()
-	pass # Replace with function body.

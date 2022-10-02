@@ -38,7 +38,6 @@ script = ExtResource( 2 )
 current = true
 
 [node name="Map" parent="." instance=ExtResource( 4 )]
-position = Vector2( -12, 2 )
 rotation = 0.000698423
 
 [node name="Line2D" type="Line2D" parent="Map"]
@@ -57,11 +56,11 @@ antialiased = true
 [node name="Line2D2" type="Line2D" parent="Map"]
 position = Vector2( 11.9986, -2.00838 )
 rotation = -0.000698423
-points = PoolVector2Array( -61, -28, -59, -11, -57, 2, -58, 9 )
+points = PoolVector2Array( -60, -14, -59, -11, -57, 2, -57, 6 )
 width = 4.0
 default_color = Color( 0.698039, 0.698039, 0.666667, 1 )
-joint_mode = 1
-begin_cap_mode = 2
+joint_mode = 2
+begin_cap_mode = 1
 end_cap_mode = 2
 sharp_limit = 1.0
 round_precision = 2
@@ -87,7 +86,7 @@ points = PoolVector2Array( 41, 11, -35, 16 )
 width = 4.0
 default_color = Color( 0.698039, 0.698039, 0.666667, 1 )
 joint_mode = 1
-begin_cap_mode = 2
+begin_cap_mode = 1
 end_cap_mode = 2
 sharp_limit = 1.0
 round_precision = 2
@@ -318,26 +317,7 @@ position = Vector2( 33, -91 )
 [node name="mountain_spawmer_5" parent="Mountains" instance=ExtResource( 3 )]
 position = Vector2( 17, 38 )
 
-[node name="tutorialbutton" type="Button" parent="."]
-margin_left = 253.0
-margin_top = -173.0
-margin_right = 313.0
-margin_bottom = -153.0
-text = "Tutorial"
-
-[node name="tutorial" type="Popup" parent="."]
-visible = true
-margin_left = 300.0
-margin_right = 300.0
-margin_bottom = 300.0
-
-[node name="Panel" type="Panel" parent="tutorial"]
-margin_right = 40.0
-margin_bottom = 40.0
-rect_min_size = Vector2( 630, 400 )
-
 [connection signal="abandoned" from="." to="." method="_townAbandoned"]
 [connection signal="angry" from="." to="." method="_townAngry"]
 [connection signal="death" from="." to="." method="_townDied"]
 [connection signal="notAngry" from="." to="." method="_townNotAngry"]
-[connection signal="button_down" from="tutorialbutton" to="." method="_on_tutorialbutton_button_down"]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cluj-coplean-castelul-haller-foto-dan-porcutan-025.jpg-9523c165247b76716aecc682ebf3c6e3.stex"
+path="res://.import/Shunned.png-1e916cd09dbf324a8e82a48868046522.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Screens/END/cluj-coplean-castelul-haller-foto-dan-porcutan-025.jpg"
-dest_files=[ "res://.import/cluj-coplean-castelul-haller-foto-dan-porcutan-025.jpg-9523c165247b76716aecc682ebf3c6e3.stex" ]
+source_file="res://Screens/END/Shunned.png"
+dest_files=[ "res://.import/Shunned.png-1e916cd09dbf324a8e82a48868046522.stex" ]
 
 [params]
 
