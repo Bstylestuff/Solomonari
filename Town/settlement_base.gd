@@ -11,7 +11,7 @@ var tolerance: int = 0
 var is_sieged: bool = false
 var can_pay:bool = false
 var curr_happiness_total:int = 30
-var hp: int = 30
+var hp: int = 12
 var crops:int = 50
 var population:int = 10
 var min_crops:int = 10
@@ -62,7 +62,7 @@ func _pass_turn():
 func _update_status():
 	_eval_food()
 	if is_sieged == true:
-		happiness_level -= 1
+		happiness_level -= 2
 		hp-=1
 	if hp==0:
 		_die()
