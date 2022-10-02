@@ -150,10 +150,6 @@ enemy_id = "hun"
 position = Vector2( 218, -107 )
 enemy_id = "hun"
 
-[node name="westnode3" parent="spawners" instance=ExtResource( 5 )]
-position = Vector2( -245, 39 )
-enemy_id = "hun"
-
 [node name="Navmesh" type="Node" parent="."]
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navmesh"]
