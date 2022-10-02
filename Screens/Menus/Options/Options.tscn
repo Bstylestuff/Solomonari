@@ -101,7 +101,7 @@ margin_bottom = 133.0
 margin_right = 330.0
 margin_bottom = 16.0
 rect_min_size = Vector2( 330, 0 )
-value = 50.0
+value = 25.0
 __meta__ = {
 "_editor_description_": ""
 }
@@ -116,7 +116,7 @@ margin_top = 28.0
 margin_right = 330.0
 margin_bottom = 44.0
 rect_min_size = Vector2( 330, 0 )
-value = 50.0
+value = 25.0
 
 [node name="HSeparator5" type="HSeparator" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer2"]
 margin_top = 48.0
@@ -128,7 +128,7 @@ margin_top = 56.0
 margin_right = 330.0
 margin_bottom = 72.0
 rect_min_size = Vector2( 330, 0 )
-value = 50.0
+value = 25.0
 __meta__ = {
 "_editor_description_": ""
 }
@@ -143,7 +143,7 @@ margin_top = 84.0
 margin_right = 330.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 330, 0 )
-value = 50.0
+value = 25.0
 
 [node name="HSeparator2" type="HSeparator" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer2"]
 margin_top = 104.0
@@ -155,7 +155,7 @@ margin_top = 112.0
 margin_right = 330.0
 margin_bottom = 128.0
 rect_min_size = Vector2( 330, 0 )
-value = 50.0
+value = 25.0
 __meta__ = {
 "_editor_description_": ""
 }
