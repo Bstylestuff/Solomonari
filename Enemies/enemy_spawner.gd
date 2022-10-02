@@ -52,7 +52,7 @@ func spawn():
 	new_enemy.set_image(loaded_resource)
 	new_enemy.set_target(get_target())
 	new_enemy.global_position=self.global_position
-	get_parent().get_node("enemy").add_child(new_enemy)
+	get_parent().get_parent().get_node("enemy").add_child(new_enemy)
 
 func get_target():
 	

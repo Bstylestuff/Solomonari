@@ -110,80 +110,91 @@ position = Vector2( 11.9986, -2.00838 )
 rotation = -0.000698423
 points = PoolVector2Array( 50, 61, 65, 61, 74, 55, 82, 52, 88, 48, 92, 43, 96, 39, 99, 32, 102, 27, 104, 22, 107, 17 )
 
-[node name="sudnode" parent="." instance=ExtResource( 5 )]
-position = Vector2( 92, 176 )
-enemy_id = "turk"
-
-[node name="sudnode2" parent="." instance=ExtResource( 5 )]
-position = Vector2( -168, 142 )
-enemy_id = "turk"
-
-[node name="westnode1" parent="." instance=ExtResource( 5 )]
-position = Vector2( -245, 39 )
-enemy_id = "hun"
-
-[node name="westnode1" parent="." instance=ExtResource( 5 )]
-position = Vector2( -245, 39 )
-enemy_id = "hun"
-
-[node name="westnode" parent="." instance=ExtResource( 5 )]
-position = Vector2( -264, 0 )
-enemy_id = "mag"
-
-[node name="westnode2" parent="." instance=ExtResource( 5 )]
-position = Vector2( -208, -72 )
-enemy_id = "turk"
-
-[node name="nordspawn" parent="." instance=ExtResource( 5 )]
-position = Vector2( 77, -184 )
-enemy_id = "rus"
-
-[node name="nordspawn2" parent="." instance=ExtResource( 5 )]
-position = Vector2( -11, -176 )
-enemy_id = "rus"
-
-[node name="nordspawn3" parent="." instance=ExtResource( 5 )]
-position = Vector2( -114, -179 )
-enemy_id = "rus"
-
-[node name="estspawn" parent="." instance=ExtResource( 5 )]
-position = Vector2( 187, -170 )
-enemy_id = "hun"
-
-[node name="estspawn2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 218, -107 )
-enemy_id = "hun"
-
-[node name="mountain_spawner_1" parent="." instance=ExtResource( 3 )]
-position = Vector2( -101, -44 )
-
-[node name="mountain_spawner_2" parent="." instance=ExtResource( 3 )]
-position = Vector2( -114, 49 )
-
-[node name="mountain_spawner_3" parent="." instance=ExtResource( 3 )]
-position = Vector2( -63, 31 )
-
-[node name="mountain_spawner_4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 33, -91 )
-
-[node name="mountain_spawmer_5" parent="." instance=ExtResource( 3 )]
-position = Vector2( 17, 38 )
-
 [node name="enemy" type="Node" parent="."]
 
 [node name="Clouds" type="Node" parent="."]
 
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="."]
+[node name="spawners" type="Node" parent="."]
+
+[node name="sudnode" parent="spawners" instance=ExtResource( 5 )]
+position = Vector2( 92, 176 )
+enemy_id = "turk"
+
+[node name="sudnode2" parent="spawners" instance=ExtResource( 5 )]
+position = Vector2( -168, 142 )
+enemy_id = "turk"
+
+[node name="westnode1" parent="spawners" instance=ExtResource( 5 )]
+position = Vector2( -245, 39 )
+enemy_id = "hun"
+
+[node name="westnode" parent="spawners" instance=ExtResource( 5 )]
+position = Vector2( -264, 0 )
+enemy_id = "mag"
+
+[node name="westnode2" parent="spawners" instance=ExtResource( 5 )]
+position = Vector2( -208, -72 )
+enemy_id = "turk"
+
+[node name="nordspawn" parent="spawners" instance=ExtResource( 5 )]
+position = Vector2( 77, -184 )
+enemy_id = "rus"
+
+[node name="nordspawn2" parent="spawners" instance=ExtResource( 5 )]
+position = Vector2( -11, -176 )
+enemy_id = "rus"
+
+[node name="nordspawn3" parent="spawners" instance=ExtResource( 5 )]
+position = Vector2( -114, -179 )
+enemy_id = "rus"
+
+[node name="estspawn" parent="spawners" instance=ExtResource( 5 )]
+position = Vector2( 187, -170 )
+enemy_id = "hun"
+
+[node name="estspawn2" parent="spawners" instance=ExtResource( 5 )]
+position = Vector2( 218, -107 )
+enemy_id = "hun"
+
+[node name="westnode3" parent="spawners" instance=ExtResource( 5 )]
+position = Vector2( -245, 39 )
+enemy_id = "hun"
+
+[node name="Navmesh" type="Node" parent="."]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navmesh"]
+visible = false
 navpoly = SubResource( 1 )
 
-[node name="NavigationPolygonInstance2" type="NavigationPolygonInstance" parent="."]
+[node name="NavigationPolygonInstance2" type="NavigationPolygonInstance" parent="Navmesh"]
+visible = false
 navpoly = SubResource( 2 )
 
-[node name="NavigationPolygonInstance3" type="NavigationPolygonInstance" parent="."]
+[node name="NavigationPolygonInstance3" type="NavigationPolygonInstance" parent="Navmesh"]
+visible = false
 navpoly = SubResource( 3 )
 
-[node name="NavigationPolygonInstance4" type="NavigationPolygonInstance" parent="."]
+[node name="NavigationPolygonInstance4" type="NavigationPolygonInstance" parent="Navmesh"]
+visible = false
 navpoly = SubResource( 4 )
 
-[node name="NavigationPolygonInstance5" type="NavigationPolygonInstance" parent="."]
+[node name="NavigationPolygonInstance5" type="NavigationPolygonInstance" parent="Navmesh"]
+visible = false
 navpoly = SubResource( 5 )
+
+[node name="Mountains" type="Node" parent="."]
+
+[node name="mountain_spawner_1" parent="Mountains" instance=ExtResource( 3 )]
+position = Vector2( -101, -44 )
+
+[node name="mountain_spawner_2" parent="Mountains" instance=ExtResource( 3 )]
+position = Vector2( -114, 49 )
+
+[node name="mountain_spawner_3" parent="Mountains" instance=ExtResource( 3 )]
+position = Vector2( -63, 31 )
+
+[node name="mountain_spawner_4" parent="Mountains" instance=ExtResource( 3 )]
+position = Vector2( 33, -91 )
+
+[node name="mountain_spawmer_5" parent="Mountains" instance=ExtResource( 3 )]
+position = Vector2( 17, 38 )
