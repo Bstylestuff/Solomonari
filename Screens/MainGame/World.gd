@@ -26,30 +26,29 @@ func _ready():
 func _townDied():
 	dead_towns+=1
 	_remove_town()
-	_eval_towns()
+	_eval_towns("Death")
 
 func _townAngry():
 	angry_towns+=1
-	_eval_towns()
+	_eval_towns("Hate")
 
 func _townAbandoned():
 	abandoned_towns+=1
 	_remove_town()
-	_eval_towns()
+	_eval_towns("Abandoned")
 
 func _townNotAngry():
 	angry_towns-=1
-	_eval_towns()
+	_eval_towns("none")
 
-func _eval_towns():
+func _eval_towns(reason: String):
 	if(dead_towns+abandoned_towns+angry_towns>=total_towns):
-		_game_over()
+		_game_over(reason)
 
 func _remove_town():
-	print("removing")
 	for town in townList:
 		if(!town.functional()):
 			townList.remove(townList.find(town))
 
-func _game_over():
-	pass
+func _game_over(reason: String):
+	MapChanger.goto_scene("res://Screens/END/GameOver"+reason+".tscn")
