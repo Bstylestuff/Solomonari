@@ -28,6 +28,9 @@ func _ready():
 	sounds["pay"]=load(sounds["pay"])
 	sounds["anger"]=load(sounds["anger"])
 	sounds["need"]=load(sounds["need"])
+	$FeelBubble.hide()
+	$NeedBubble.hide()
+	$Pay.hide()
 	
 func _init():
 	money_per_tick = 5
