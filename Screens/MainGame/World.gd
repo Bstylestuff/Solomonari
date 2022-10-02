@@ -15,6 +15,8 @@ signal angry
 signal abandoned
 signal notAngry
 
+func get_towns():
+	return townList
 
 func _ready():
 	GameState.prep_rand()

@@ -2,7 +2,7 @@ extends Node2D
 
 const enemt_template = preload("res://Enemies/Enemy.tscn")
 var loaded_resource=null
-var towns=[]
+#var towns=[]
 export (String, "turk","mag","hun","rus") var enemy_id
 var enemy_data = {
 	"turk": 
@@ -40,7 +40,7 @@ func _ready():
 	if(GameState.randomizer==null):
 		GameState.prep_rand()
 	loaded_resource = load(enemy_data[enemy_id]["img"])
-	towns = get_tree().get_nodes_in_group("towns")
+	#towns = get_tree().get_nodes_in_group("towns")
 	i_died()
 
 func spawn():
@@ -55,8 +55,9 @@ func spawn():
 	get_parent().get_parent().get_node("enemy").add_child(new_enemy)
 
 func get_target():
-	var random_target = GameState.randomizer.randi_range(0,towns.size()-1)
-	return towns[random_target].global_position
+	var town = get_parent().get_parent().get_towns()
+	var random_target = GameState.randomizer.randi_range(0,town.size()-1)
+	return town[random_target].global_position
 
 func i_died():
 	$Timer.set_wait_time(GameState.randomizer.randi_range(enemy_data[enemy_id]["spawn_time_min"],enemy_data[enemy_id]["spawn_time_max"]))
