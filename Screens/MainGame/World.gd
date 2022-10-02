@@ -52,3 +52,9 @@ func _remove_town():
 
 func _game_over(reason: String):
 	MapChanger.goto_scene("res://Screens/END/GameOver"+reason+".tscn")
+
+
+func _input(event):
+	if Input.is_action_pressed("Pause"):
+		MapChanger.goto_scene("res://Screens/Menus/MainMenu/MainMenu.tscn")
+	
