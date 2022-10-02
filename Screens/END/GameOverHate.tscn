@@ -3,3 +3,17 @@
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -152, -91 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+margin_right = 640.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 640, 80 )
+text = "And so ends the story.
+When rains don't come and people are tired of begging, the respect earned in time has turned into hatred. Now shuned from the cities. Might as well be an invader yourself.  "
+fit_content_height = true
