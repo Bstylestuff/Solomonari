@@ -135,6 +135,7 @@ antialiased = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
+disabled = true
 
 [node name="storm_avoid" type="NavigationPolygonInstance" parent="."]
 navpoly = SubResource( 12 )

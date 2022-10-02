@@ -39,7 +39,6 @@ var enemy_data = {
 func _ready():
 	if(GameState.randomizer==null):
 		GameState.prep_rand()
-	var targ_res= enemy_data[enemy_id]
 	loaded_resource = load(enemy_data[enemy_id]["img"])
 	towns = get_tree().get_nodes_in_group("towns")
 	i_died()
