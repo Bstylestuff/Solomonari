@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://new_theme.tres" type="Theme" id=1]
+[ext_resource path="res://Screens/Menus/Credits/back_button.gd" type="Script" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextEdit" type="TextEdit" parent="."]
+margin_right = 637.0
+margin_bottom = 240.0
+text = "How to play:
+
+Use the mouse to help Relu the dragon guide the storm clouds towards the invaders or the towns needing water for their crops. 
+If towns are happy with your performance they will pay up. 
+Losing the trust of the people or letting the population die will result in the loss of the town. 
+If you lose all the towns you lose the game. 
+
+How long can you last? "
+wrap_enabled = true
+
+[node name="back_button" type="Button" parent="."]
+margin_left = 256.0
+margin_top = 242.0
+margin_right = 376.0
+margin_bottom = 275.0
+rect_min_size = Vector2( 120, 30 )
+theme = ExtResource( 1 )
+text = "Back"
+script = ExtResource( 2 )
+
+[connection signal="pressed" from="back_button" to="back_button" method="_on_back_button_pressed"]
