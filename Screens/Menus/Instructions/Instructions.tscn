@@ -7,9 +7,20 @@
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="TextEdit" type="TextEdit" parent="."]
-margin_right = 637.0
-margin_bottom = 240.0
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -310.0
+margin_right = 310.0
+alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer"]
+margin_top = 3.0
+margin_right = 620.0
+margin_bottom = 323.0
+rect_min_size = Vector2( 620, 320 )
+theme = ExtResource( 1 )
 text = "How to play:
 
 Use the mouse to help Relu the dragon guide the storm clouds towards the invaders or the towns needing water for their crops. 
@@ -17,17 +28,24 @@ If towns are happy with your performance they will pay up.
 Losing the trust of the people or letting the population die will result in the loss of the town. 
 If you lose all the towns you lose the game. 
 
-How long can you last? "
+How long can you last will determine your fate"
+readonly = true
+context_menu_enabled = false
+shortcut_keys_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
 wrap_enabled = true
 
-[node name="back_button" type="Button" parent="."]
-margin_left = 256.0
-margin_top = 242.0
-margin_right = 376.0
-margin_bottom = 275.0
+[node name="back_button" type="Button" parent="VBoxContainer"]
+margin_top = 327.0
+margin_right = 620.0
+margin_bottom = 357.0
 rect_min_size = Vector2( 120, 30 )
 theme = ExtResource( 1 )
 text = "Back"
 script = ExtResource( 2 )
 
-[connection signal="pressed" from="back_button" to="back_button" method="_on_back_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/back_button" to="VBoxContainer/back_button" method="_on_back_button_pressed"]
