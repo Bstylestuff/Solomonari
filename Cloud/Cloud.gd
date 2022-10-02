@@ -92,14 +92,22 @@ func _progress_line(position):
 	#$Line2D.add_point(position)
 
 func _on_AnimatedSprite_animation_finished():
-	if $AnimatedSprite.animation == "Attack":
-		for i in $Area2D.get_overlapping_areas():
-			if i!=null and i.is_in_group("enemies"):
+	var attacking=false
+	var overlaps= $Area2D.get_overlapping_areas()
+
+	for i in overlaps:
+		if i!=null:
+			if i.is_in_group("enemies"):
 				i.get_parent().deal_damage()
 				ttl-=4
-	elif $AnimatedSprite.animation == "Idle":
-		for i in $Area2D.get_overlapping_areas():
-			if i!=null and i.is_in_group("Town"):
+				attacking=true
+			elif i.is_in_group("Town"):
 				ttl-=5
 				i.get_parent().rain(5)
-		ttl -=1 
+		ttl -=1
+	if(attacking):
+		_attack() 
+
+
+func _attack():
+	$AnimatedSprite.play("Attack")

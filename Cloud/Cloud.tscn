@@ -38,7 +38,7 @@ scale_curve = SubResource( 17 )
 anim_speed = 6.29
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 12.0
+radius = 19.0263
 
 [sub_resource type="Curve" id=13]
 _data = [ Vector2( 0, 0.135135 ), 0.0, 0.275764, 0, 0, Vector2( 1, 0.990991 ), -0.366031, 0.0, 0, 0 ]
@@ -145,7 +145,6 @@ navpoly = SubResource( 12 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 11 )
 animation = "Idle"
-frame = 2
 playing = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
