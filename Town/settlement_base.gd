@@ -18,6 +18,9 @@ var min_crops:int = 10
 var turn_duration:int = 5
 var curr_turn:float=0
 var angry:bool=false
+var dead:bool=false
+var abandoned:bool=false
+var sent_anger:bool=false
 
 var sounds = {
 	"pay": "res://Town/Art/Audio/pickup_money.wav",
@@ -37,6 +40,9 @@ func _init():
 	happiness_level = 10
 	required_food = 2
 
+func functional():
+	return not (dead or abandoned)
+
 func _physics_process(delta):
 	curr_turn+=delta
 	if(curr_turn>turn_duration):
@@ -44,6 +50,8 @@ func _physics_process(delta):
 		curr_turn-=turn_duration
 
 func _pass_turn():
+	if(dead or abandoned):
+		return
 	_update_status()
 	_eval_happiness()
 	if(can_pay):
@@ -99,7 +107,9 @@ func _need():
 
 func _anger():
 	angry=true
-	get_parent().get_parent().emit_signal("angry")
+	if(not sent_anger):
+		get_parent().get_parent().emit_signal("angry")
+		sent_anger=true
 	$AnimationPlayer.play("Angry")
 	$AudioStreamPlayer2D.stream=sounds["anger"]
 	$AudioStreamPlayer2D.play()
@@ -109,7 +119,8 @@ func _pay_up():
 
 func _die():
 	get_parent().get_parent().emit_signal("death")
-	queue_free()
+	dead=true
+
 
 func rain(amount):
 	crops+=amount
@@ -127,7 +138,7 @@ func _pop_death():
 
 func _abandon():
 	get_parent().get_parent().emit_signal("abandoned")
-	queue_free()
+	abandoned=true
 
 func _decrease_storage(amount):
 	stored_food-=amount
@@ -144,5 +155,6 @@ func _add_happiness(amount):
 	if(angry):
 		if(happiness_level>0):
 			get_parent().get_parent().emit_signal("notAngry")
+			sent_anger=false
 	if(happiness_level>15):
 		happiness_level=15
