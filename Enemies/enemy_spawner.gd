@@ -9,29 +9,29 @@ var enemy_data = {
 		{"img":"res://Enemies/turk/Art/Visual/Enemy.png", 
 		"speed":6, 
 		"hp":5, 
-		"spawn_time_max":15, 
+		"spawn_time_max":14, 
 		"spawn_time_min":10 
 		}, 
 	"mag": 
 		{"img":"res://Enemies/mag/Art/Visual/Enemy.png", 
 		"speed":5, 
 		"hp":6 , 
-		"spawn_time_max":20, 
+		"spawn_time_max":18, 
 		"spawn_time_min":13
 		}, 
 	"hun": 
 		{"img":"res://Enemies/hun/Art/Visual/Enemy.png", 
 
-		"speed":16, 
+		"speed":17, 
 		"hp":3, 
-		"spawn_time_max":30, 
+		"spawn_time_max":28, 
 		"spawn_time_min":25
 		} , 
 	"rus": 
 		{"img":"res://Enemies/rus/Art/Visual/Enemy.png", 
 		"speed":3, 
-		"hp":13,
-		"spawn_time_max":40, 
+		"hp":14,
+		"spawn_time_max":35, 
 		"spawn_time_min":30
 		}
 	}
