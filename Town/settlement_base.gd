@@ -156,5 +156,6 @@ func _add_happiness(amount):
 		if(happiness_level>0):
 			get_parent().get_parent().emit_signal("notAngry")
 			sent_anger=false
+			angry=false
 	if(happiness_level>15):
 		happiness_level=15
