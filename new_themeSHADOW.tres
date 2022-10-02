@@ -3,6 +3,7 @@
 [ext_resource path="res://Screens/Menus/MainMenu/Font.TTF" type="DynamicFontData" id=1]
 
 [sub_resource type="DynamicFont" id=1]
+outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 extra_spacing_char = 1
 extra_spacing_space = 7
