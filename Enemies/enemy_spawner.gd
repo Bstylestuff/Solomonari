@@ -55,7 +55,6 @@ func spawn():
 	get_parent().get_parent().get_node("enemy").add_child(new_enemy)
 
 func get_target():
-	
 	var random_target = GameState.randomizer.randi_range(0,towns.size()-1)
 	return towns[random_target].global_position
 

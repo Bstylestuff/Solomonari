@@ -1,10 +1,9 @@
 extends Node2D
 
-
 var mobile : bool = true
+var towns=[]
+
 func _ready():
-	if not ["Android", "BlackBerry 10", "iOS", "UWP"].has(OS.get_name()):
-		mobile=false
-	if(mobile):
-		$pauseButton.show()
 	GameState.prep_rand()
+	towns=get_tree().get_nodes_in_group("towns")
+

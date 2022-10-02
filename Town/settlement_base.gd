@@ -48,31 +48,30 @@ func _pass_turn():
 	_eval_happiness()
 	if(can_pay):
 		if(stored_food>required_food*population*2):
-			stored_food-=required_food*population
+			_decrease_storage(required_food*population)
 			pay()
 
 func _update_status():
 	_eval_food()
 	if is_sieged == true:
-		happiness_level = happiness_level - 1
+		happiness_level -= 1
 		hp-=1
 	if hp==0:
 		_die()
 
 func _eval_food():
 	_consume_food()
-	if stored_food >= required_food:
-		happiness_level += 1
+	if stored_food >= required_food*population:
+		_add_happiness(stored_food-required_food*population)
 	else: 
 		happiness_level -= 1
 
 func _consume_food():
-	
-	stored_food-=required_food*population
+	_decrease_storage(required_food*population)
 	if(stored_food<0):
 		_pop_death()
 	stored_food+=crops
-	crops-=population
+	_decrease_crops(population)
 	if(crops<min_crops):
 		_need()
 	if(crops>required_food*population):
@@ -114,7 +113,7 @@ func rain(amount):
 	
 func _birth():
 	if(GameState.randomizer.randi_range(0,100)>40):
-		crops-=30
+		_decrease_crops(30)
 		population+=1
 
 func _pop_death():
@@ -122,3 +121,18 @@ func _pop_death():
 	happiness_level-=3
 	if(population==0):
 		_die()
+
+func _decrease_storage(amount):
+	stored_food-=amount
+	if(stored_food<0):
+		stored_food=0
+		
+func _decrease_crops(amount):
+	crops-=amount
+	if(crops<0):
+		crops=0
+
+func _add_happiness(amount):
+	happiness_level+=amount
+	if(happiness_level>15):
+		happiness_level=15
