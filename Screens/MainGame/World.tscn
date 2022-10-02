@@ -198,3 +198,8 @@ position = Vector2( 33, -91 )
 
 [node name="mountain_spawmer_5" parent="Mountains" instance=ExtResource( 3 )]
 position = Vector2( 17, 38 )
+
+[connection signal="abandoned" from="." to="." method="_townAbandoned"]
+[connection signal="angry" from="." to="." method="_townAngry"]
+[connection signal="death" from="." to="." method="_townDied"]
+[connection signal="notAngry" from="." to="." method="_townNotAngry"]

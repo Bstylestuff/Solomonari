@@ -17,7 +17,7 @@ var population:int = 10
 var min_crops:int = 10
 var turn_duration:int = 5
 var curr_turn:float=0
-
+var angry:bool=false
 
 var sounds = {
 	"pay": "res://Town/Art/Audio/pickup_money.wav",
@@ -98,6 +98,8 @@ func _need():
 	$AudioStreamPlayer2D.play()
 
 func _anger():
+	angry=true
+	get_parent().get_parent().emit_signal("angry")
 	$AnimationPlayer.play("Angry")
 	$AudioStreamPlayer2D.stream=sounds["anger"]
 	$AudioStreamPlayer2D.play()
@@ -106,7 +108,8 @@ func _pay_up():
 	GameState.add_score(population)
 
 func _die():
-	pass
+	get_parent().get_parent().emit_signal("death")
+	queue_free()
 
 func rain(amount):
 	crops+=amount
@@ -120,7 +123,11 @@ func _pop_death():
 	population-=1
 	happiness_level-=3
 	if(population==0):
-		_die()
+		_abandon()
+
+func _abandon():
+	get_parent().get_parent().emit_signal("abandoned")
+	queue_free()
 
 func _decrease_storage(amount):
 	stored_food-=amount
@@ -134,5 +141,8 @@ func _decrease_crops(amount):
 
 func _add_happiness(amount):
 	happiness_level+=amount
+	if(angry):
+		if(happiness_level>0):
+			get_parent().get_parent().emit_signal("notAngry")
 	if(happiness_level>15):
 		happiness_level=15

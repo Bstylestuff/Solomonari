@@ -63,8 +63,12 @@ func _on_AudioStreamPlayer2D_finished():
 	if(dying):
 		die()
 	elif(hitting_town):
-		target_town.siege()
-		$AudioStreamPlayer2D.play()
+		if(target_town !=null):
+			target_town.siege()
+			$AudioStreamPlayer2D.play()
+		else:
+			hitting_town=false
+			die()
 
 
 func _on_Area2D_area_entered(area):
