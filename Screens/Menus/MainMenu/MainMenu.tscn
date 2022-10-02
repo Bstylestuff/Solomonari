@@ -1,11 +1,14 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Screens/Menus/MainMenu/MainMenu.gd" type="Script" id=2]
 [ext_resource path="res://new_theme.tres" type="Theme" id=5]
 
+[sub_resource type="Theme" id=1]
+
 [node name="Main window" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = SubResource( 1 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_horizontal_guides_": [ 125.0, 355.0, 355.0 ],
@@ -18,9 +21,9 @@ anchor_bottom = 1.0
 alignment = 1
 
 [node name="TextEdit" type="TextEdit" parent="VBoxContainer"]
-margin_top = 15.0
+margin_top = 13.0
 margin_right = 640.0
-margin_bottom = 125.0
+margin_bottom = 123.0
 grow_horizontal = 2
 grow_vertical = 2
 rect_min_size = Vector2( 0, 110 )
@@ -38,9 +41,9 @@ drag_and_drop_selection_enabled = false
 wrap_enabled = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 129.0
+margin_top = 127.0
 margin_right = 640.0
-margin_bottom = 345.0
+margin_bottom = 346.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
@@ -48,7 +51,7 @@ alignment = 1
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
 margin_left = 230.0
 margin_right = 410.0
-margin_bottom = 216.0
+margin_bottom = 219.0
 rect_min_size = Vector2( 180, 200 )
 
 [node name="Start" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
@@ -69,21 +72,22 @@ text = "Options"
 [node name="Instructions" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
 margin_top = 98.0
 margin_right = 180.0
-margin_bottom = 118.0
+margin_bottom = 121.0
+theme = ExtResource( 5 )
 text = "How to Play"
 
 [node name="Credits" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
-margin_top = 122.0
+margin_top = 125.0
 margin_right = 180.0
-margin_bottom = 167.0
+margin_bottom = 170.0
 rect_min_size = Vector2( 0, 45 )
 theme = ExtResource( 5 )
 text = "Credits"
 
 [node name="Quit" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
-margin_top = 171.0
+margin_top = 174.0
 margin_right = 180.0
-margin_bottom = 216.0
+margin_bottom = 219.0
 rect_min_size = Vector2( 0, 45 )
 theme = ExtResource( 5 )
 text = "Quit"

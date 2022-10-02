@@ -6,13 +6,14 @@
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 1 )
 
 [node name="TextEdit" type="TextEdit" parent="."]
 margin_right = 637.0
 margin_bottom = 240.0
 text = "How to play:
 
-Use the mouse to help Relu the dragon guide the storm clouds towards the invaders or the towns needing water for their crops. 
+Use the mouse to help Relu the dragon drag the storm clouds towards the invaders or the towns needing water for their crops. 
 If towns are happy with your performance they will pay up. 
 Losing the trust of the people or letting the population die will result in the loss of the town. 
 If you lose all the towns you lose the game. 
