@@ -18,7 +18,7 @@ func _ready():
 	sounds["thunderStruck"]=load(sounds["thunderStruck"])
 
 func _physics_process(_delta):
-	if target !=null:
+	if target !=null && self.global_position.distance_to(target)>5:
 		
 		$NavigationAgent2D.set_target_location(target)
 		
