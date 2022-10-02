@@ -14,9 +14,8 @@ anchor_bottom = 1.0
 alignment = 1
 
 [node name="TextEdit" type="TextEdit" parent="VBoxContainer"]
-margin_left = 20.0
 margin_top = 33.0
-margin_right = 620.0
+margin_right = 640.0
 margin_bottom = 123.0
 grow_horizontal = 2
 grow_vertical = 2

@@ -1,8 +1,12 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://new_theme.tres" type="Theme" id=1]
+[ext_resource path="res://Screens/Menus/Options/Options.gd" type="Script" id=2]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 2 )
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="."]
 margin_top = 30.0
@@ -13,89 +17,279 @@ grow_vertical = 2
 alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer2"]
-margin_left = 120.0
-margin_right = 520.0
+margin_left = 89.0
+margin_right = 550.0
 margin_bottom = 297.0
 rect_min_size = Vector2( 180, 200 )
 
 [node name="Description" type="RichTextLabel" parent="HBoxContainer2/VBoxContainer"]
-margin_right = 400.0
+margin_right = 461.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 100, 50 )
+theme = ExtResource( 1 )
 text = "Volume Settings and other"
 
-[node name="Label" type="Label" parent="HBoxContainer2/VBoxContainer"]
+[node name="HBoxContainer6" type="HBoxContainer" parent="HBoxContainer2/VBoxContainer"]
 margin_top = 54.0
-margin_right = 400.0
-margin_bottom = 68.0
-text = "sadfsda"
+margin_right = 461.0
+margin_bottom = 187.0
 
-[node name="HSlider" type="HSlider" parent="HBoxContainer2/VBoxContainer"]
-margin_top = 72.0
-margin_right = 400.0
-margin_bottom = 88.0
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer2/VBoxContainer/HBoxContainer6"]
+margin_right = 79.0
+margin_bottom = 133.0
 
-[node name="Label2" type="Label" parent="HBoxContainer2/VBoxContainer"]
-margin_top = 92.0
-margin_right = 400.0
-margin_bottom = 106.0
-text = "sadfsda"
+[node name="Label" type="Label" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer"]
+margin_right = 79.0
+margin_bottom = 17.0
+theme = ExtResource( 1 )
+text = "Master"
 
-[node name="HSlider2" type="HSlider" parent="HBoxContainer2/VBoxContainer"]
-margin_top = 110.0
-margin_right = 400.0
-margin_bottom = 126.0
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer"]
+margin_top = 21.0
+margin_right = 79.0
+margin_bottom = 25.0
 
-[node name="Label3" type="Label" parent="HBoxContainer2/VBoxContainer"]
-margin_top = 130.0
-margin_right = 400.0
-margin_bottom = 144.0
-text = "sadfsda"
+[node name="Label4" type="Label" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer"]
+margin_top = 29.0
+margin_right = 79.0
+margin_bottom = 46.0
+theme = ExtResource( 1 )
+text = "Music"
 
-[node name="HSlider3" type="HSlider" parent="HBoxContainer2/VBoxContainer"]
-margin_top = 148.0
-margin_right = 400.0
-margin_bottom = 164.0
+[node name="HSeparator3" type="HSeparator" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer"]
+margin_top = 50.0
+margin_right = 79.0
+margin_bottom = 54.0
 
-[node name="Label4" type="Label" parent="HBoxContainer2/VBoxContainer"]
-margin_top = 168.0
-margin_right = 400.0
-margin_bottom = 182.0
-text = "sadfsda"
+[node name="Cloud" type="Label" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer"]
+margin_top = 58.0
+margin_right = 79.0
+margin_bottom = 75.0
+theme = ExtResource( 1 )
+text = "Towns"
 
-[node name="HSlider4" type="HSlider" parent="HBoxContainer2/VBoxContainer"]
-margin_top = 186.0
-margin_right = 400.0
-margin_bottom = 202.0
+[node name="HSeparator2" type="HSeparator" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer"]
+margin_top = 79.0
+margin_right = 79.0
+margin_bottom = 83.0
 
-[node name="Label5" type="Label" parent="HBoxContainer2/VBoxContainer"]
-margin_top = 206.0
-margin_right = 400.0
-margin_bottom = 220.0
-text = "sadfsda"
+[node name="Town" type="Label" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer"]
+margin_top = 87.0
+margin_right = 79.0
+margin_bottom = 104.0
+theme = ExtResource( 1 )
+text = "Clouds"
 
-[node name="HSlider5" type="HSlider" parent="HBoxContainer2/VBoxContainer"]
-margin_top = 224.0
-margin_right = 400.0
-margin_bottom = 240.0
+[node name="HSeparator4" type="HSeparator" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer"]
+margin_top = 108.0
+margin_right = 79.0
+margin_bottom = 112.0
+
+[node name="Town2" type="Label" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer"]
+margin_top = 116.0
+margin_right = 79.0
+margin_bottom = 133.0
+theme = ExtResource( 1 )
+text = "Invaders"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer2/VBoxContainer/HBoxContainer6"]
+margin_left = 83.0
+margin_right = 413.0
+margin_bottom = 133.0
+
+[node name="MasterSlider" type="HSlider" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer2"]
+margin_right = 330.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 330, 0 )
+value = 50.0
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer2"]
+margin_top = 20.0
+margin_right = 330.0
+margin_bottom = 24.0
+
+[node name="MusicSlider" type="HSlider" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer2"]
+margin_top = 28.0
+margin_right = 330.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 330, 0 )
+value = 50.0
+
+[node name="HSeparator5" type="HSeparator" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer2"]
+margin_top = 48.0
+margin_right = 330.0
+margin_bottom = 52.0
+
+[node name="TownSlider" type="HSlider" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer2"]
+margin_top = 56.0
+margin_right = 330.0
+margin_bottom = 72.0
+rect_min_size = Vector2( 330, 0 )
+value = 50.0
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="HSeparator3" type="HSeparator" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer2"]
+margin_top = 76.0
+margin_right = 330.0
+margin_bottom = 80.0
+
+[node name="CloudSlider" type="HSlider" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer2"]
+margin_top = 84.0
+margin_right = 330.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 330, 0 )
+value = 50.0
+
+[node name="HSeparator2" type="HSeparator" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer2"]
+margin_top = 104.0
+margin_right = 330.0
+margin_bottom = 108.0
+
+[node name="InvaderSlider" type="HSlider" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer2"]
+margin_top = 112.0
+margin_right = 330.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 330, 0 )
+value = 50.0
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer2/VBoxContainer/HBoxContainer6"]
+margin_left = 417.0
+margin_right = 436.0
+margin_bottom = 133.0
+
+[node name="MasterLabel" type="Label" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer3"]
+margin_right = 19.0
+margin_bottom = 17.0
+theme = ExtResource( 1 )
+text = "50"
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer3"]
+margin_top = 21.0
+margin_right = 19.0
+margin_bottom = 25.0
+
+[node name="MusicLabel" type="Label" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer3"]
+margin_top = 29.0
+margin_right = 19.0
+margin_bottom = 46.0
+theme = ExtResource( 1 )
+text = "50"
+
+[node name="HSeparator3" type="HSeparator" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer3"]
+margin_top = 50.0
+margin_right = 19.0
+margin_bottom = 54.0
+
+[node name="TownLabel" type="Label" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer3"]
+margin_top = 58.0
+margin_right = 19.0
+margin_bottom = 75.0
+theme = ExtResource( 1 )
+text = "50"
+
+[node name="HSeparator2" type="HSeparator" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer3"]
+margin_top = 79.0
+margin_right = 19.0
+margin_bottom = 83.0
+
+[node name="CloudLabel" type="Label" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer3"]
+margin_top = 87.0
+margin_right = 19.0
+margin_bottom = 104.0
+theme = ExtResource( 1 )
+text = "50"
+
+[node name="HSeparator4" type="HSeparator" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer3"]
+margin_top = 108.0
+margin_right = 19.0
+margin_bottom = 112.0
+
+[node name="InvaderLabel" type="Label" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer3"]
+margin_top = 116.0
+margin_right = 19.0
+margin_bottom = 133.0
+theme = ExtResource( 1 )
+text = "50"
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="HBoxContainer2/VBoxContainer/HBoxContainer6"]
+margin_left = 440.0
+margin_right = 461.0
+margin_bottom = 133.0
+
+[node name="MasterReset" type="Button" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer4"]
+margin_right = 21.0
+margin_bottom = 23.0
+theme = ExtResource( 1 )
+text = "R"
+
+[node name="MusicReset" type="Button" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer4"]
+margin_top = 27.0
+margin_right = 21.0
+margin_bottom = 50.0
+theme = ExtResource( 1 )
+text = "R"
+
+[node name="TownReset" type="Button" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer4"]
+margin_top = 54.0
+margin_right = 21.0
+margin_bottom = 77.0
+theme = ExtResource( 1 )
+text = "R"
+
+[node name="CloudReset" type="Button" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer4"]
+margin_top = 81.0
+margin_right = 21.0
+margin_bottom = 104.0
+theme = ExtResource( 1 )
+text = "R"
+
+[node name="InvaderReset" type="Button" parent="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer4"]
+margin_top = 108.0
+margin_right = 21.0
+margin_bottom = 131.0
+theme = ExtResource( 1 )
+text = "R"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer2/VBoxContainer"]
-margin_top = 244.0
-margin_right = 400.0
-margin_bottom = 277.0
+margin_top = 191.0
+margin_right = 461.0
+margin_bottom = 224.0
 rect_min_size = Vector2( 400, 33 )
 alignment = 1
 
 [node name="apply_but" type="Button" parent="HBoxContainer2/VBoxContainer/HBoxContainer"]
-margin_left = 78.0
-margin_right = 198.0
+margin_left = 108.0
+margin_right = 228.0
 margin_bottom = 33.0
 rect_min_size = Vector2( 120, 30 )
+theme = ExtResource( 1 )
 text = "Apply"
 
 [node name="back_but" type="Button" parent="HBoxContainer2/VBoxContainer/HBoxContainer"]
-margin_left = 202.0
-margin_right = 322.0
+margin_left = 232.0
+margin_right = 352.0
 margin_bottom = 33.0
 rect_min_size = Vector2( 120, 30 )
+theme = ExtResource( 1 )
 text = "Back"
+
+[connection signal="value_changed" from="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer2/MasterSlider" to="." method="_on_MasterSlider_value_changed"]
+[connection signal="value_changed" from="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer2/MusicSlider" to="." method="_on_MusicSlider_value_changed"]
+[connection signal="value_changed" from="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer2/TownSlider" to="." method="_on_TownSlider_value_changed"]
+[connection signal="value_changed" from="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer2/CloudSlider" to="." method="_on_CloudSlider_value_changed"]
+[connection signal="value_changed" from="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer2/InvaderSlider" to="." method="_on_InvaderSlider_value_changed"]
+[connection signal="pressed" from="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer4/MasterReset" to="." method="_on_MasterReset_pressed"]
+[connection signal="pressed" from="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer4/MusicReset" to="." method="_on_MusicReset_pressed"]
+[connection signal="pressed" from="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer4/TownReset" to="." method="_on_TownReset_pressed"]
+[connection signal="pressed" from="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer4/CloudReset" to="." method="_on_CloudReset_pressed"]
+[connection signal="pressed" from="HBoxContainer2/VBoxContainer/HBoxContainer6/VBoxContainer4/InvaderReset" to="." method="_on_InvaderReset_pressed"]
+[connection signal="pressed" from="HBoxContainer2/VBoxContainer/HBoxContainer/apply_but" to="." method="_on_apply_but_pressed"]
+[connection signal="pressed" from="HBoxContainer2/VBoxContainer/HBoxContainer/back_but" to="." method="_on_back_but_pressed"]
