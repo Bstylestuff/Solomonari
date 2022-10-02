@@ -27,6 +27,7 @@ func _physics_process(_delta):
 		var velocity = self.global_position.direction_to(next_location)*speed
 		velocity = move_and_slide(velocity)
 
+
 func set_image(img):
 	$Sprite.texture=img
 	return
@@ -75,6 +76,8 @@ func _on_Area2D_area_entered(area):
 	if(area.is_in_group("Town")):
 		area.get_parent().siege()
 		target_town=area.get_parent()
+		if !target_town.functional():
+			die()
 		hitting_town=true
 		$AudioStreamPlayer2D.stream=sounds["siege"]
 		$AudioStreamPlayer2D.play()
