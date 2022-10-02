@@ -120,6 +120,7 @@ func _pay_up():
 func _die():
 	get_parent().get_parent().emit_signal("death")
 	dead=true
+	$AnimationPlayer.get_animation("burning").set_loop(true)
 	$AnimationPlayer.play("burning")
 
 
@@ -140,6 +141,7 @@ func _pop_death():
 func _abandon():
 	get_parent().get_parent().emit_signal("abandoned")
 	abandoned=true
+	$AnimationPlayer.get_animation("burning").set_loop(true)
 	$AnimationPlayer.play("burning")
 
 func _decrease_storage(amount):
