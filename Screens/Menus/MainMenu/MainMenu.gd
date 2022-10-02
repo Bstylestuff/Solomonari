@@ -8,6 +8,11 @@ func _on_Options_pressed():
 
 func _on_Credits_pressed():
 	MapChanger.goto_scene("res://Screens/Menus/Credits/Credits.tscn")
+func _on_Instructions_pressed():
+	MapChanger.goto_scene("res://Screens/Menus/Instructions/Instructions.tscn")
 
 func _on_Quit_pressed():
 	get_tree().quit()
+
+
+
